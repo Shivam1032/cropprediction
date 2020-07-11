@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="container">
@@ -17,7 +17,7 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 @endsection
