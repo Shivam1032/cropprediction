@@ -63,5 +63,13 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        'superadmin' => \App\Http\Middleware\SuperAdmin::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        'soiltester' => \App\Http\Middleware\SoilTester::class,
+        'seeddist'=>\App\Http\Middleware\SeedDistribution::class,
+        'pvt' => \App\Http\Middleware\PrivateCompany::class,
+        'farmer' => \App\Http\Middleware\Farmer::class,
+
     ];
 }
