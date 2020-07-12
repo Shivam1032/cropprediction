@@ -36,6 +36,7 @@ class RegisterController extends Controller
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -47,14 +48,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'mobile' => ['required','string','max:12','unique:user'],
+            'mobile' => ['required','string','max:12'],
             'farmer_id_card'=>['required','string','max:20'],
             'aadhar_card'=>['required','string','max:20'],
+            'role'=>['required','string'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -67,13 +70,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        dd('ON CREATE CALLED');
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'mobile' => $data['mobile'],
             'farmer_id_card' =>$data['farmer_id_card'],
             'aadhar_card'=>$data['aadhar_card'],
-            'role'=>'5';
+            // 'role'=>$data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }
