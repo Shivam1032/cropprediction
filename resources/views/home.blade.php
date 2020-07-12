@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('farmer.home')
 
 @section('content')
 <div class="container">

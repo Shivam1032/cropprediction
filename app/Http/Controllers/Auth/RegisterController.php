@@ -50,16 +50,17 @@ class RegisterController extends Controller
      */
 
     protected function validator(array $data)
-    {
-        return Validator::make($data, [
+    {   
+        return Validator::make($data, [   
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'mobile' => ['required','string','max:12'],
-            'farmer_id_card'=>['required','string','max:20'],
-            'aadhar_card'=>['required','string','max:20'],
+            'mobile' => ['required','string','max:12','unique:users'],
             'role'=>['required','string'],
+            'farmer_id_card'=>['required_if:role,5','alpha_num','max:13','unique:users'],
+            'aadhar_card'=>['required','string','max:20','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+     
     }
 
     /**
@@ -70,14 +71,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        dd('ON CREATE CALLED');
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'mobile' => $data['mobile'],
             'farmer_id_card' =>$data['farmer_id_card'],
             'aadhar_card'=>$data['aadhar_card'],
-            // 'role'=>$data['role'],
+            'role'=>$data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }
