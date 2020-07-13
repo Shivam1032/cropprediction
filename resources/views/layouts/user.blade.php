@@ -97,14 +97,95 @@
               </p>
             </a>
         </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-bookmark"></i>
+              <p>
+                My Record
+              </p>
+            </a>
+        </li>
+        <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-medkit"></i>
+              <p>
+                Request For Aids
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a href="../layout/top-nav.html" class="nav-link">
+                  <i class="fa fa-circle nav-icon"></i>
+                  <p>Labour Requirement</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="fa fa-circle nav-icon"></i>
+                  <p>Irrigation Aids</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/boxed.html" class="nav-link">
+                  <i class="fa fa-circle nav-icon"></i>
+                  <p>Farm Machinery</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Soil Testing
-                <!-- <span class="right badge badge-danger">New</span> -->
+                Sell Your Produce
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fa fa-square"></i>
+              <p>
+                Media
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-flag"></i>
+              <p>
+                Report A Problem
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-map-marker"></i>
+              <p>
+                Contact Us
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a href="../layout/top-nav.html" class="nav-link">
+                  <i class="fa fa-search nav-icon"></i>
+                  <p>Search For CSC</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="nav-icon fa fa-envelope"></i>
+                  <p>Email</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/boxed.html" class="nav-link">
+                  <i class="fa fa-phone nav-icon"></i>
+                  <p>Contact No.</p>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
