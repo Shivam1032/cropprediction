@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Laravel {{app()->getLocale()}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -61,28 +61,43 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">{{__('Login ? Registered User')}}</a>
+                        <a href="{{ route('login') }}">{{__('Login')}}</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">{{__('Register ? New User')}}</a>
                         @endif
+
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
+<!-- Services section -->
+<section class="jumbotron text-center">
+     <div class="container">
+       <h1 class="jumbotron-heading">Album example</h1>
+       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sIet, but not too short so folks don't simply skip over it entirely.</p>
+       <p>
+         <a href="#" class="btn btn-primary">Main call to action</a>
+         <a href="#" class="btn btn-secondary">Secondary action</a>
+       </p>
+     </div>
+</section>
+
+	<!-- /Services section -->
+            </div>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
@@ -94,6 +109,7 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
             </div>
         </div>
     </body>
