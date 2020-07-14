@@ -1,0 +1,68 @@
+<template>
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+<div class="card">
+            <div class="card-header">
+              <h4 class="card-title">User Managment</h4>
+              <div class="card-tools">
+                    <div class="input-group" style="width:350px;">
+                            <input type="text" class="form-control mr-1">
+                            <div class="input-group-append bg-success">
+                               <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                  <div class="row">
+                      <div class="col-sm-12 col-md-6"></div>
+                      <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                 <div class="row">
+                     <div class="col-sm-12">
+                         <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="User Managment">
+                <thead>
+                <tr role="row">
+
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user name">User Name</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user email">E-mail</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="District">District</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">Village</th>
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">Edit</th> 
+                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">Delete</th>   
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr role="row" class="odd">
+                  <td class="" tabindex="0">Mohit Agrawal</td>
+                  <td>nicemohit260@gmail.com</td>
+                  <td class="sorting_1">Gaurella-Pendra-Marwahi</td>
+                  <td class="sorting_1">Gaurella</td>
+                  <td><button type="button" class="btn btn-primary">Edit</button></td>
+                  <td><button type="button" class="btn btn-danger">Delete</button></td>
+                </tr>
+                </tbody>
+              </table>
+              </div>
+              </div>
+            <!-- /.card-body -->
+          </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        mounted() {
+            console.log('Component mounted.')
+        }
+    }
+</script>

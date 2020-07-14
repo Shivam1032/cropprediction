@@ -4,18 +4,19 @@
 <head>
   <meta charset="utf-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-  <title> ADMIN|{{ config('app.name', 'KRISHI BODH') }}</title>
+  <title> ADMIN| {{ config('app.name', 'KRISHI BODH') }}</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/app.css">
+    
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" >
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -35,12 +36,13 @@
                                 </li>
                             @endif
                         @else
+                        <div class="float-right">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right float-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -52,10 +54,10 @@
                                     </form>
                                 </div>
                             </li>
+                            </div>
                         @endguest
                     </ul>
-                </div>
-            </div>
+              
        
     </ul>
   </nav>
@@ -64,7 +66,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
+    <a href="" class="brand-link">
       <img src="/image/logo.png" alt="krishi bodh logo" class="brand-image"
            style="opacity: 1">
       <span class="brand-text font-weight-light">{{ config('app.name', 'KRISHI BODH') }}</span>
@@ -90,54 +92,39 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="#" class="nav-link active">
+        <router-link to="/user" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
+              
                 {{__('Dashboard')}}
+                
               </p>
-            </a>
+              </router-link>  
         </li>
+
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <router-link to="/test" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Soil Testing
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
-            </a>
+            </router-link>
           </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
-          </div><!-- /.col -->
-          <!-- <div class="col-sm-6"> -->
-            <!-- <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol> -->
-          <!-- </div>/.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-      @yield('content')
-              
+      <router-view></router-view>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -147,6 +134,5 @@
 </div>
 <!-- ./wrapper -->
 <script src="/js/app.js"></script>
-
 </body>
 </html>
