@@ -29,13 +29,46 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo;
+    public function redirectTo()
+    {
+        switch (Auth::user()->role)
+        {
+            case 0:
+                $this->redirectTo = '/superadmin';
+                return $this->redirectTo;
+                break;
+            case 1:
+                $this->redirectTo = '/admin';
+                return $this->redirectTo;
+                break;
+            case 2:
+                $this->redirectTo = '/seeddistribution';
+                return $this->redirectTo;
+                break;
+            case 3:
+                $this->redirectTo = '/soiltester';
+                return $this->redirectTo;
+                break;
+
+            case 4:
+                $this->redirectTo = '/buyer';
+                return $this->redirectTo;
+                break;
+
+            case 5:  
+                $this->redirectTo = '/farmer';
+                return $this->redirectTo;
+                break;
+        }
+    }
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -47,13 +80,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
     protected function validator(array $data)
-    {
-        return Validator::make($data, [
+    {   
+        return Validator::make($data, [   
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'mobile' => ['required','string','max:12','unique:users'],
+            'role'=>['required','string'],
+            'farmer_id_card'=>['required_if:role,5','alpha_num','max:13','unique:users'],
+            'aadhar_card'=>['required','string','max:20','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+     
     }
 
     /**
@@ -67,6 +106,10 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'mobile' => $data['mobile'],
+            'farmer_id_card' =>$data['farmer_id_card'],
+            'aadhar_card'=>$data['aadhar_card'],
+            'role'=>$data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }
