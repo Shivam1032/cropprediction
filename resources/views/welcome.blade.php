@@ -36,7 +36,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="https://pmkisan.gov.in/" target="_blank">PM Kisan</a>
             <a class="dropdown-item" href="#" target="_blank">{{__('KCC')}}</a>
-            <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">{{_('Soil Health Card'}}</a>
+            <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">{{__('Soil Health Card')}}</a>
             <a class="dropdown-item" href="https://pmfby.gov.in/" target="_blank">{{__('PMFBY')}}</a>
             <a class="dropdown-item" href="https://pmksy.gov.in/" target="_blank">{{__('PMKSY')}}</a>
             <a class="dropdown-item" href="https://rkvy.nic.in/" target="_blank">{{__('RKVY')}}</a>
