@@ -45,21 +45,14 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="https://pmkisan.gov.in/" target="_blank">PM Kisan</a>
-<<<<<<< HEAD
+
             <a class="dropdown-item" href="#" target="_blank">{{__('KCC')}}</a>
             <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">{{__('Soil Health Card')}}</a>
             <a class="dropdown-item" href="https://pmfby.gov.in/" target="_blank">{{__('PMFBY')}}</a>
             <a class="dropdown-item" href="https://pmksy.gov.in/" target="_blank">{{__('PMKSY')}}</a>
             <a class="dropdown-item" href="https://rkvy.nic.in/" target="_blank">{{__('RKVY')}}</a>
             <a class="dropdown-item" href="https://www.enam.gov.in/web/" target="_blank">{{__('eNAM')}}</a>
-=======
-            <a class="dropdown-item" href="#" target="_blank">KCC</a>
-            <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">Soil Health Card</a>
-            <a class="dropdown-item" href="https://pmfby.gov.in/" target="_blank">PMFBY</a>
-            <a class="dropdown-item" href="https://pmksy.gov.in/" target="_blank">PMKSY</a>
-            <a class="dropdown-item" href="https://rkvy.nic.in/" target="_blank">RKVY</a>
-            <a class="dropdown-item" href="https://www.enam.gov.in/web/" target="_blank">eNAM</a>
->>>>>>> parent of aff5081... localization
+
           </div>
         </li>
         <li class="nav-item">
