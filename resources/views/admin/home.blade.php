@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-  <title> ADMIN| {{ config('app.name', 'KRISHI BODH') }}</title>
+  <title> ADMIN| KRISHI BODH</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,37 +25,25 @@
                             <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login ? Registered User') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register ? New User') }}</a>
-                                </li>
-                            @endif
-                        @else
-                        <div class="float-right">
+                                                <div class="float-right">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    Admin <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right float-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="https://kbfms.in/logout"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        Logout
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                                    <form id="logout-form" action="https://kbfms.in/logout" method="POST" style="display: none;">
+                                        <input type="hidden" name="_token" value="e1eEhcWaLlOhVWnHr2TeQ90EA9Ksyx7MReTGbV7C">                                    </form>
                                 </div>
                             </li>
                             </div>
-                        @endguest
-                    </ul>
+                                            </ul>
               
        
     </ul>
@@ -69,7 +56,7 @@
     <a href="" class="brand-link">
       <img src="/image/logo.png" alt="krishi bodh logo" class="brand-image"
            style="opacity: 1">
-      <span class="brand-text font-weight-light">{{ config('app.name', 'KRISHI BODH') }}</span>
+      <span class="brand-text font-weight-light">KRISHI BODH</span>
     </a>
 
     <!-- Sidebar -->
@@ -83,7 +70,7 @@
         <div class="info">
         <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
         <!-- <span class="fa fa-user"> -->
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          <a href="#" class="d-block">Admin</a>
           <!-- </span> -->
         </div>
       </div>
@@ -96,7 +83,7 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
               
-                {{__('Dashboard')}}
+                Dashboard
                 
               </p>
               </router-link>  

@@ -3,15 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
   <title>KBFMS</title>
+
+  <title>Laravel {{app()->getLocale()}}</title>
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
   <link href="/css/app.css" rel="stylesheet" type="text/css">
+
+
+
 </head>
 
 
 <body class="skin-blue layout-top-nav">
+
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img src="/image/logo.png" alt="krishi bodh logo" class="img-fluid"
@@ -35,19 +45,28 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="https://pmkisan.gov.in/" target="_blank">PM Kisan</a>
+<<<<<<< HEAD
             <a class="dropdown-item" href="#" target="_blank">{{__('KCC')}}</a>
             <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">{{__('Soil Health Card')}}</a>
             <a class="dropdown-item" href="https://pmfby.gov.in/" target="_blank">{{__('PMFBY')}}</a>
             <a class="dropdown-item" href="https://pmksy.gov.in/" target="_blank">{{__('PMKSY')}}</a>
             <a class="dropdown-item" href="https://rkvy.nic.in/" target="_blank">{{__('RKVY')}}</a>
             <a class="dropdown-item" href="https://www.enam.gov.in/web/" target="_blank">{{__('eNAM')}}</a>
+=======
+            <a class="dropdown-item" href="#" target="_blank">KCC</a>
+            <a class="dropdown-item" href="https://www.soilhealth.dac.gov.in/" target="_blank">Soil Health Card</a>
+            <a class="dropdown-item" href="https://pmfby.gov.in/" target="_blank">PMFBY</a>
+            <a class="dropdown-item" href="https://pmksy.gov.in/" target="_blank">PMKSY</a>
+            <a class="dropdown-item" href="https://rkvy.nic.in/" target="_blank">RKVY</a>
+            <a class="dropdown-item" href="https://www.enam.gov.in/web/" target="_blank">eNAM</a>
+>>>>>>> parent of aff5081... localization
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">{{__('Success Stories')}}</a>
+          <a class="nav-link" href="#">Success Stories</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,10 +83,16 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-        <a class="nav-link" href="{{ route('register') }}">Register</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign Up
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Farmer</a>
+            <a class="dropdown-item" href="#">Buyer</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="{{ route('login') }}">Log In</a>
+          <a class="nav-link" href="#">Log In</a>
         </li>
       </ul>
     </div>
