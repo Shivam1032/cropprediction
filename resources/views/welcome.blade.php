@@ -76,16 +76,13 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sign Up
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="nav-link" href="{{route('register')}}">Register</a>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Farmer</a>
-            <a class="dropdown-item" href="#">Buyer</a>
-          </div>
+            <a class="dropdown-item" href="#">Buyer</a> -->
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#">Log In</a>
+          <a class="nav-link" href="{{route('login')}}">Log In</a>
         </li>
       </ul>
     </div>

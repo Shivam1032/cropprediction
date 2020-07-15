@@ -23,7 +23,7 @@
       </li>
         <!-- TOP NAVIGATION BAR -->
                             <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+              <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                                                 <div class="float-right">
                             <li class="nav-item dropdown">
@@ -31,19 +31,20 @@
                                     Admin <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right float-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="https://kbfms.in/logout"
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Logout
+                                        {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="https://kbfms.in/logout" method="POST" style="display: none;">
-                                        <input type="hidden" name="_token" value="e1eEhcWaLlOhVWnHr2TeQ90EA9Ksyx7MReTGbV7C">                                    </form>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                 </div>
                             </li>
                             </div>
-                                            </ul>
+               </ul>
               
        
     </ul>

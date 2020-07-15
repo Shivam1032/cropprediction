@@ -6,15 +6,15 @@
                   <div class ="card-header">
                       <button type="button" class="btn btn-primary btn-block"> REQUEST FOR SOIL TESTING</button>
                   </div>
-                  <div class="card-body">
-                        <div  class="dataTables_wrapper dt-bootstrap4">
-                            <div class="row">
+                 <div class="card-body">
+                    <div  class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
                             <div class="col-sm-12 col-md-6"></div>
                             <div class="col-sm-12 col-md-6"></div>
                         </div>
                         <div class="row">
                            <div class="col-sm-12">
-                                <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="User Managment">
+                                <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                                        <thead>
                                              <tr role="row">
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user name">User Name</th>
@@ -37,12 +37,13 @@
                                           </tr>
                                          </tbody>
                                 </table>
-                         </div>
-                     </div>   
-                 </div>
+                          </div>
+                        </div>   
+                     </div>
              </div>
-          </div>
+         </div>
       </div>    
+  </div>
   </div>
 </template>
 
