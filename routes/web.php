@@ -21,13 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/superadmin','SuperAdminController@index')->name('superadmin')->middleware('superadmin');
-Route::get('/admin','AdminController@index')->name('admin')->middleware('admin');
-Route::get('/seeddistribution','SeedDistributionController@index')->name('seeddistributor')->middleware('seeddist');
-Route::get('/soiltester','SoilTesterController@index')->name('soiltester')->middleware('soiltester');
-Route::get('/buyer','PrivateCompanyController@index')->name('buyer')->middleware('pvt');
-Route::get('/farmer','FarmerController@index')->name('farmer')->middleware('farmer');
+Route::get('/superadmin','SuperAdminController@index')->name('superadmin');
+Route::get('/admin','AdminController@index')->name('admin');
+Route::get('/seeddistribution','SeedDistributionController@index')->name('seeddistributor');
+Route::get('/soiltester','SoilTesterController@index')->name('soiltester');
+Route::get('/buyer','PrivateCompanyController@index')->name('buyer');
+Route::get('/farmer','FarmerController@index')->name('farmer');
 
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
