@@ -27,7 +27,6 @@ Route::get('/seeddistribution','SeedDistributionController@index')->name('seeddi
 Route::get('/soiltester','SoilTesterController@index')->name('soiltester');
 Route::get('/buyer','PrivateCompanyController@index')->name('buyer');
 Route::get('/farmer','FarmerController@index')->name('farmer');
-Route::get('/farmer/#','FarmerController@home')->name('farmerhome');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

@@ -71,52 +71,24 @@
       </div>
 
       <div class="modal-body">
-        
-         <div class="md-form mb-5">
-          <i class="fas fa-envelope prefix grey-text"></i>
+        <form @submit.prevent = "createuser">
+         <div class="form-group row">
+            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
           <input type="email" id="defaultForm-email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
         </div>
-
-                  <div class="form-group row">
-            <label>Name</label>
-            <input v-model="form.name" type="text" name="name" placeholder="Enter the Full Name" class="form-control">
-          </div>
-
-                  <div class="form-group">
-            <label>Name</label>
-            <input v-model="form.name" type="text" name="name" placeholder="Enter the Full Name" class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
-            <has-error :form="form" field="name"></has-error>
-          </div>
-
-                  <div class="form-group">
-            <label>Name</label>
-            <input v-model="form.name" type="text" name="name" placeholder="Enter the Full Name" class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
-            <has-error :form="form" field="name"></has-error>
-          </div>
-
-                  <div class="form-group">
-            <label>Name</label>
-            <input v-model="form.name" type="text" name="name" placeholder="Enter the Full Name" class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
-            <has-error :form="form" field="name"></has-error>
-          </div>
-
-                  <div class="form-group">
-            <label>Name</label>
-            <input v-model="form.name" type="text" name="name" placeholder="Enter the Full Name" class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
-            <has-error :form="form" field="name"></has-error>
-          </div>
-      </div>
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Add User</button>
       </div>
+        </form>
+      </div>
+
+
     </div>
   </div>
 </div>
-
-    </div>
+</div>
 </template>
 
 <script>
@@ -130,9 +102,14 @@
               farmer_id_card:'',
               aadhar_card:'',
               role:'',
-              password:''
           })
         }
+      },
+      methods:{
+          createuser()
+          {
+            this.form.post('api/user');
+          }
       },
         mounted() {
             console.log('Component mounted.')

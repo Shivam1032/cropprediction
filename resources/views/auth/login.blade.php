@@ -68,35 +68,57 @@
             </div>
             <div class="card-content">
                 <div class="card-body">
-                    <form class="form form-vertical">
+                    <form class="form form-vertical" method="POST" action="{{ route('login')}}">
+                    @csrf
                         <div class="form-body">
                             <div class="row">
+                            
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="email-id-vertical">{{ __('E-Mail / Mobile') }}</label>
-                                        <input type="email" id="email-id-vertical" class="form-control" name="email-id" placeholder="{{ __('E-Mail / Mobile') }}">
+                                        <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('E-Mail / Mobile') }}" value = "{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                        @error('email')
+                                             <span class="invalid-feedback" role="alert">
+                                               <strong>{{ $message }}</strong>
+                                             </span>
+                                         @enderror
                                     </div>
                                 </div>
+
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <label for="password-vertical">{{ __('Password') }}</label>
-                                        <input type="password" id="password-vertical" class="form-control" name="contact" placeholder="{{ __('Password') }}">
+                                        <label for="password">{{ __('Password') }}</label>
+                                        <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" required autocomplete="current-password">
+                                             @error('password')
+                                                 <span class="invalid-feedback" role="alert">
+                                                 <strong>{{ $message }}</strong>
+                                                 </span>
+                                              @enderror
                                     </div>
+
+                                    @if (Route::has('password.request'))
                                     <div class="col-12 d-flex justify-content-end">
-                                    <a href="{{ route('password.request') }}"><small>{{ __('Forgot Your Password?') }}</small></a>
+                                    <a href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
+                                
+                                   @endif
+
                                 </div>
-                                </div>
+
                                 <div class="col-12">
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <input type="checkbox" class="checkbox-input" id="checkbox3">
-                                            <label for="checkbox3">{{ __('Remember Me') }}</label>
-                                        </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" value = "{{ old('remember') ? 'checked' : '' }}">
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                
                                     </div>
                                 </div>
+
                                 <div class="col-12 d-flex">
                                     <button type="submit" class="btn btn-outline-primary btn-block mr-1 mb-1">{{ __('Login') }}</button>
                                 </div>
+
                                 <div class="col-12 justify-content-center">
 
                                     <a href="#"><h5 style="text-align: center;padding: 2%;">Sign In with OTP</h5></a>

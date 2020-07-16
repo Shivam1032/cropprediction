@@ -54,7 +54,7 @@
                             <label for="role" class="col-md-4 col-form-label">{{ __('Role') }}</label>
 
                             <div class="col-md-8">
-                                <select id="role" class="form-control @error('mobile') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role">
+                                <select id="role" class="form-control @error('mobile') is-invalid @enderror" name="role" value="{{ old('role') }}" required>
                                     <option value="5">{{ __('Farmer') }}</option>
 
                                     <option value="4">{{ __('Buyer') }}</option>
