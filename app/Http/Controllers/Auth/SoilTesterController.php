@@ -15,6 +15,6 @@ class SoilTesterController extends Controller
 
     public function index()
     {
-        return view('soil.home');
+        return view('soil.dashboard');
     }
 }

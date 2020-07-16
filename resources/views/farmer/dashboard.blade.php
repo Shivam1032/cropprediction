@@ -181,7 +181,7 @@
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/user" class="nav-link">
+                <router-link to="/contact-us" class="nav-link">
                   <i class="fa fa-phone nav-icon"></i>
                   <p>Contact No.</p>
                 </router-link>
