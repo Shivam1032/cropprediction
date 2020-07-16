@@ -1,22 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -24,13 +20,10 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -38,25 +31,21 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
@@ -69,5 +58,62 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="row justify-content-center">
+    <div class="col-md-5 col-12">
+        <div class="card">
+            <div class="card-header" style="background-color: #fff;">
+                <h2><b>{{ __('Login') }}</b></h2>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <form class="form form-vertical">
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-vertical">{{ __('E-Mail / Mobile') }}</label>
+                                        <input type="email" id="email-id-vertical" class="form-control" name="email-id" placeholder="{{ __('E-Mail / Mobile') }}">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="password-vertical">{{ __('Password') }}</label>
+                                        <input type="password" id="password-vertical" class="form-control" name="contact" placeholder="{{ __('Password') }}">
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-end">
+                                    <a href="{{ route('password.request') }}"><small>{{ __('Forgot Your Password?') }}</small></a>
+                                </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" class="checkbox-input" id="checkbox3">
+                                            <label for="checkbox3">{{ __('Remember Me') }}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex">
+                                    <button type="submit" class="btn btn-outline-primary btn-block mr-1 mb-1">{{ __('Login') }}</button>
+                                </div>
+                                <div class="col-12 justify-content-center">
+
+                                    <a href="#"><h5 style="text-align: center;padding: 2%;">Sign In with OTP</h5></a>
+                                </div>
+
+                                <div class="col-12 d-flex">
+                                    <a href="#">{{ __('Not a user? Sign Up') }}</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
 @endsection

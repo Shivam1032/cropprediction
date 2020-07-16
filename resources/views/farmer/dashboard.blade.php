@@ -21,39 +21,24 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-        <!-- TOP NAVIGATION BAR -->
-                            <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login ? Registered User') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register ? New User') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+     
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+      
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          {{ Auth::user()->name }}
+          <span class="caret"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                </form>
+          </div>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -86,22 +71,24 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item">	        <li class="nav-item">
-          <a href="#" class="nav-link active">	         
+        <li class="nav-item">
+          <a href="{{route('farmerhome')}}" class="nav-link active">	         
               <i class="nav-icon fas fa-tachometer-alt"></i>	             
               <p>	           
                 Dashboard	            
               </p>	     
             </a>	      
         </li>	     
+
         <li class="nav-item">
           <router-link to="/user" class="nav-link">
               <i class="nav-icon fas fa-bookmark"></i>
               <p>
                 My Record
               </p>
-          </route-link>
+          </router-link>
         </li>
+
         <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-medkit"></i>
@@ -110,88 +97,94 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+
             <ul class="nav nav-treeview" style="display: block;">
               <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="fa fa-circle nav-icon"></i>
                   <p>Labour Requirement</p>
-                </a>
+                </router-link>
               </li>
+
               <li class="nav-item">
-                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="fa fa-circle nav-icon"></i>
                   <p>Irrigation Aids</p>
-                </a>
+                </router-link>
               </li>
+
               <li class="nav-item">
-                <a href="../layout/boxed.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="fa fa-circle nav-icon"></i>
                   <p>Farm Machinery</p>
-                </a>
+                </router-link>
               </li>
+
             </ul>
           </li>
          
           <li class="nav-item">	    
-            <a href="pages/widgets.html" class="nav-link">
+            <router-link to="/user" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
               <p>Soil Testing
                 <!-- <span class="right badge badge-danger">New</span> -->	             
                </p>
-            </a>
+            </router-link>
           </li>
 
           <li class="nav-item">	    
-            <a href="pages/widgets.html" class="nav-link">
+            <router-link to="/user" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
               <p>Sell Your Produce
                 <!-- <span class="right badge badge-danger">New</span> -->	             
                </p>
-            </a>
+            </router-link>
           </li>
 
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <router-link to="/user" class="nav-link">
               <i class="nav-icon fa fa-square"></i>
               <p>
                 Media
               </p>
-            </a>
+            </router-link>
           </li>
+
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <router-link to="/user" class="nav-link">
               <i class="nav-icon fas fa-flag"></i>
               <p>
                 Report A Problem
               </p>
-            </a>
+            </router-link>
           </li>
+
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-map-marker"></i>
               <p>
                 Contact Us
                 <i class="fas fa-angle-left right"></i>
-              </p>	              </p>
-            </a>	            </a>
+              </p>	   
+            </a>	           
             <ul class="nav nav-treeview" style="display: block;">
               <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="fa fa-search nav-icon"></i>
                   <p>Search For CSC</p>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="nav-icon fa fa-envelope"></i>
                   <p>Email</p>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="../layout/boxed.html" class="nav-link">
+                <router-link to="/user" class="nav-link">
                   <i class="fa fa-phone nav-icon"></i>
                   <p>Contact No.</p>
-                </a>
+                </router-link>
               </li>
             </ul>
           </li>	      
@@ -225,7 +218,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <router-view></router-view>
+         <router-view></router-view> 
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

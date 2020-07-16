@@ -4,7 +4,11 @@
          <div class="col-md-12">
              <div class ="card card-default">
                   <div class ="card-header">
-                      <button type="button" class="btn btn-primary btn-block"> REQUEST FOR SOIL TESTING</button>
+                <form id="logout-form" action=" " method="POST" style="display: none;">
+                      @csrf
+                      <button type="submit" class="btn btn-primary btn-block"> REQUEST FOR SOIL TESTING</button>
+                </form>
+
                   </div>
                  <div class="card-body">
                     <div  class="dataTables_wrapper dt-bootstrap4">
