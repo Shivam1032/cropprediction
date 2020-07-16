@@ -18,8 +18,4 @@ class FarmerController extends Controller
         return view('farmer.dashboard');
     }
 
-    public function home()
-    {
-        return view('farmer.home');
-    }
 }
