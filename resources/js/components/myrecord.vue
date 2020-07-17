@@ -49,12 +49,13 @@ export default {
         return{
         
         history:{},
+        user:{},
        }   
 
        },
 methods:{
     loadhistory(){
-            axios.get("api/history").then(({ data })=>{this.history = data});
+            axios.get("api/history/${user.id}").then(({ data })=>{this.history = data});
     }
 },created()
     {
@@ -62,7 +63,7 @@ methods:{
     },
     mounted()
     {
-        console.log('Mounted')
+        axios.get("/getuserid").then(({ data })=>{this.user = data});
     }
 }
 </script>
