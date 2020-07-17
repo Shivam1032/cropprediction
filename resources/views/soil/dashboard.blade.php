@@ -71,123 +71,39 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item">
-          <a href="" class="nav-link active">	         
-              <i class="nav-icon fas fa-tachometer-alt"></i>	             
-              <p>	           
-                Dashboard	            
-              </p>	     
-            </a>	      
-        </li>	     
-
-        <li class="nav-item">
-          <router-link to="/user" class="nav-link">
-              <i class="nav-icon fas fa-bookmark"></i>
-              <p>
-                My Record
-              </p>
-          </router-link>
-        </li>
-
-        <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-medkit"></i>
-              <p>
-                Request For Aids
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-
-            <ul class="nav nav-treeview" style="display: block;">
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-circle nav-icon"></i>
-                  <p>Labour Requirement</p>
-                </router-link>
-              </li>
-
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-circle nav-icon"></i>
-                  <p>Irrigation Aids</p>
-                </router-link>
-              </li>
-
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-circle nav-icon"></i>
-                  <p>Farm Machinery</p>
-                </router-link>
-              </li>
-
-            </ul>
-          </li>
-         
-          <li class="nav-item">	    
-            <router-link to="/soil-report" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>	           
-              <p>Soil Testing
-                <!-- <span class="right badge badge-danger">New</span> -->	             
-               </p>
-            </router-link>
-          </li>
-
-          <li class="nav-item">	    
-            <router-link to="/user" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>	           
-              <p>Sell Your Produce
-                <!-- <span class="right badge badge-danger">New</span> -->	             
-               </p>
-            </router-link>
-          </li>
+          <li class="nav-item">
+            <a href="{{route('farmerhome')}}" class="nav-link active">	         
+                <i class="nav-icon fas fa-tachometer-alt"></i>	             
+                <p>	           
+                  Dashboard	            
+                </p>	     
+              </a>	      
+          </li>	     
 
           <li class="nav-item">
             <router-link to="/user" class="nav-link">
-              <i class="nav-icon fa fa-square"></i>
-              <p>
-                Media
-              </p>
+                <i class="nav-icon fas fa-bookmark"></i>
+                <p>
+                  All Reports
+                </p>
             </router-link>
           </li>
-
           <li class="nav-item">
             <router-link to="/user" class="nav-link">
-              <i class="nav-icon fas fa-flag"></i>
-              <p>
-                Report A Problem
-              </p>
+                <i class="nav-icon fas fa-bookmark"></i>
+                <p>
+                  Report Farmer wise
+                </p>
             </router-link>
           </li>
-
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-map-marker"></i>
-              <p>
-                Contact Us
-                <i class="fas fa-angle-left right"></i>
-              </p>	   
-            </a>	           
-            <ul class="nav nav-treeview" style="display: block;">
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-search nav-icon"></i>
-                  <p>Search For CSC</p>
-                </router-link>
-              </li>
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="nav-icon fa fa-envelope"></i>
-                  <p>Email</p>
-                </router-link>
-              </li>
-              <li class="nav-item">
-                <router-link to="/contact-us" class="nav-link">
-                  <i class="fa fa-phone nav-icon"></i>
-                  <p>Contact No.</p>
-                </router-link>
-              </li>
-            </ul>
-          </li>	      
+          <li class="nav-item">
+            <router-link to="/user" class="nav-link">
+                <i class="nav-icon fa fa-map-marker"></i>
+                <p>
+                  Contact Us
+                </p>
+            </router-link>
+          </li>
         </ul>	 
       </nav>
       <!-- /.sidebar-menu -->
