@@ -53,6 +53,13 @@
 
 <script>
 export default {
+  data()
+  {
+
+  },created()
+  {
+      
+  },
     mounted()
     {
         console.log('Component Mounted')

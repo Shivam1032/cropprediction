@@ -27,7 +27,7 @@ class UserController extends Controller
     {
         //
 
-        return ['message'=> 'Requested for store'];
+        
     }
 
     /**

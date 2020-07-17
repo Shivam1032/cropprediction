@@ -81,7 +81,7 @@
         </li>	     
 
         <li class="nav-item">
-          <router-link to="/user" class="nav-link">
+          <router-link to="/myrecord" class="nav-link">
               <i class="nav-icon fas fa-bookmark"></i>
               <p>
                 My Record

@@ -28,20 +28,22 @@
                                 <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                                        <thead>
                                              <tr role="row">
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Farmer Id">Farmerid</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Sample Number">Sample No.</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="pH">pH</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Nitrogen">N</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Phosphores">P</th> 
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Potesium">K</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">Update</th>   
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Farmer Id">Farmer id</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Sample Number">Sample No.</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Sample Number">District</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="pH">pH(0-14)</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Nitrogen">N</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Phosphores">P</th> 
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Potesium">K</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="">Update</th>   
                                              </tr>
 
                                         </thead>
                                         <tbody>
-                                          <tr role="row" class="even">
+                                          <tr role="row" class="odd">
                                              <td class="" tabindex="0">1</td>
                                              <td>23</td>
+                                             <td>District</td>
                                              <td class="sorting_1">313</td>
                                              <td class="sorting_1">111</td>
                                              <td class="sorting_1">111</td>
@@ -117,9 +119,6 @@
                 </div>
             </div>
         </div>
-
-
-
       </div>    
   </div>
   </div>

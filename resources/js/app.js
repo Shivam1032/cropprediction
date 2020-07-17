@@ -10,6 +10,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import {Form,HasError, AlertError } from 'vform';
+import moment from 'moment';
 
 window.Form = Form;
 Vue.component(HasError.name, HasError)
@@ -26,7 +27,8 @@ let routes =[
     {path: '/user',component:require('./components/user.vue').default},
     {path: '/test',component:require('./components/soiltesting.vue').default},
     {path: '/contact-us',component:require('./components/contactus.vue').default},
-    {path: '/soil-report',component:require('./components/soilreport.vue').default}
+    {path: '/soil-report',component:require('./components/soilreport.vue').default},
+    {path: '/myrecord',component:require('./components/myrecord.vue').default},
 ]
 /**
  * The following block of code may be used to automatically register your
@@ -39,6 +41,21 @@ let routes =[
  const router = new VueRouter({
      routes
  })
+
+ Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue').default
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue').default
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue').default
+);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
     
@@ -49,6 +66,17 @@ let routes =[
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.filter('upText',function(value)
+{
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+});
+
+Vue.filter('stddate',function(value){
+   return moment(value).format("DD/MM/YYYY");
+});
+
 
 let app = new Vue({
     el: '#app',

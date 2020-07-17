@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -87,15 +88,15 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'mobile' => ['required','string','max:12','unique:users'],
-            'role'=>['required','string'],
-            'farmer_id_card'=>['required_if:role,5','alpha_num','max:13','unique:users'],
+            'role'=>['required'],
+            'farmer_id_card'=>['required_if:role,5|alpha_num|max:13|unique:users'],
             'aadhar_card'=>['required','string','max:20','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
      
     }
 
-    /**
+    /**s
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
