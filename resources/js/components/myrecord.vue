@@ -47,23 +47,25 @@
 export default {
     data(){
         return{
-        
         history:{},
-        user:{},
-       }   
-
+        id:"",
+        }
        },
 methods:{
     loadhistory(){
-            axios.get("api/history/${user.id}").then(({ data })=>{this.history = data});
+        var _this =this.id;
+        console.log(_this);
+            axios.get(`api/history`).then(({ data })=>{this.history = data});
     }
 },created()
     {
+        axios.get("/getuserid").then(({ data })=>{this.id = data});
         this.loadhistory();
-    },
-    mounted()
+    }
+    ,mounted()
     {
-        axios.get("/getuserid").then(({ data })=>{this.user = data});
+        axios.get("/getuserid").then(({ data })=>{this.id = data});
+        // axios.get("/getuserid").then(({ data2 })=>{this.id = data2});
     }
 }
 </script>

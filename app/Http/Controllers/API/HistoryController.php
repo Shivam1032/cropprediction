@@ -40,7 +40,7 @@ class HistoryController extends Controller
     public function show($id)
     {
         //
-         return History::where('user_id',$id)->order->get();
+         return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
     }
 
     /**
