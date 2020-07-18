@@ -15,7 +15,8 @@ class SoilController extends Controller
      */
     public function index()
     {
-        return Soil::all();
+        
+          return Soil::all();
     }
     /**
      * Store a newly created resource in storage.

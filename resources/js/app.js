@@ -43,7 +43,7 @@ const options = {
 
 let routes =[
     {path: '/user',component:require('./components/user.vue').default},
-    {path: '/test',component:require('./components/soiltesting.vue').default},
+    {path: '/soiltest',component:require('./components/soiltesting.vue').default},
     {path: '/contact-us',component:require('./components/contactus.vue').default},
     {path: '/soil-report',component:require('./components/soilreport.vue').default},
     {path: '/myrecord',component:require('./components/myrecord.vue').default},

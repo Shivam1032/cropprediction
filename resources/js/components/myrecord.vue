@@ -29,6 +29,7 @@
                 <tr v-for="his in history" :key="his.id"> 
                   <td>{{his.created_at  | stddate}}</td>
                   <td>{{his.description}}</td>
+                  <!-- <td>{{this.data}}</td> -->
                 </tr>
                 </tbody>
 
@@ -49,28 +50,18 @@ export default {
         return{
         history:{},
         user:'',
+
         }
        },
 computed:{
     loadhistory(){
-        // var _this =this.user;
-        // console.log(_this);
+            //var _this =this.user;
+            //console.log(_this);
             axios.get(`api/history/${this.user}`).then(({ data })=>{this.history = data});
     }
-},created()
+},mounted()
     {
-            this.$getLocation(options)
-  .then(coordinates => {
-    console.log(coordinates);
-  });
-
         axios.get("/getuserid").then(({ data })=>{this.user = data});
-       // this.loadhistory();
     }
-    // ,mounted()
-    // {
-    //     axios.get("/getuserid").then(({ data })=>{this.id = data});
-    //     // axios.get("/getuserid").then(({ data2 })=>{this.id = data2});
-    // }
 }
 </script>

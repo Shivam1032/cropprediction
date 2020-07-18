@@ -28,6 +28,13 @@ Route::get('/soiltester','SoilTesterController@index')->name('soiltester');
 Route::get('/buyer','PrivateCompanyController@index')->name('buyer');
 Route::get('/farmer','FarmerController@index')->name('farmer');
 
+Route::get('/superadmin/home','SuperAdminController@home')->name('superadminhome');
+Route::get('/admin/home','AdminController@home')->name('adminhome');
+Route::get('/seeddistribution/home','SeedDistributionController@home')->name('seeddistributorhome');
+Route::get('/soiltester/home','SoilTesterController@home')->name('soiltesterhome');
+Route::get('/buyer/home','PrivateCompanyController@home')->name('buyerhome');
+Route::get('/farmer/home','FarmerController@home')->name('farmerhome');
+
 Route::get('/getuserid', function(){
     // $data['id'] = Auth::user()->id;
     // return response()->json($data,200);
