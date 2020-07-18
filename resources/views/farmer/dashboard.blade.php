@@ -92,39 +92,14 @@
           </router-link>
         </li>
 
-        <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-medkit"></i>
-              <p>
-                Request For Aids
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-
-            <ul class="nav nav-treeview" style="display: block;">
+      
               <li class="nav-item">
-                <router-link to="/user" class="nav-link">
+                <router-link to="/requestaids" class="nav-link">
                   <i class="fa fa-circle nav-icon"></i>
-                  <p>Labour Requirement</p>
+                  <p>Request For Aids</p>
                 </router-link>
               </li>
 
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-circle nav-icon"></i>
-                  <p>Irrigation Aids</p>
-                </router-link>
-              </li>
-
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-circle nav-icon"></i>
-                  <p>Farm Machinery</p>
-                </router-link>
-              </li>
-
-            </ul>
-          </li>
          
           <li class="nav-item">	    
             <router-link to="/soiltest" class="nav-link">
@@ -162,34 +137,14 @@
             </router-link>
           </li>
 
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-map-marker"></i>
-              <p>
-                Contact Us
-                <i class="fas fa-angle-left right"></i>
-              </p>	   
-            </a>	           
-            <ul class="nav nav-treeview" style="display: block;">
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="fa fa-search nav-icon"></i>
-                  <p>Search For CSC</p>
-                </router-link>
-              </li>
-              <li class="nav-item">
-                <router-link to="/user" class="nav-link">
-                  <i class="nav-icon fa fa-envelope"></i>
-                  <p>Email</p>
-                </router-link>
-              </li>
+
               <li class="nav-item">
                 <router-link to="/contact-us" class="nav-link">
-                  <i class="fa fa-phone nav-icon"></i>
-                  <p>Contact No.</p>
+                  <i class="fa fa-search nav-icon"></i>
+                  <p>Contact us</p>
                 </router-link>
               </li>
-            </ul>
+            
           </li>	      
         </ul>	 
       </nav>

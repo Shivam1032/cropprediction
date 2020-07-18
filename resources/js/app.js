@@ -41,13 +41,17 @@ const options = {
 
 
 
-let routes =[
+let routes =
+[
     {path: '/user',component:require('./components/user.vue').default},
-    {path: '/soiltest',component:require('./components/soiltesting.vue').default},
+    {path: '/testreport',component:require('./components/soiltesting.vue').default},
     {path: '/contact-us',component:require('./components/contactus.vue').default},
     {path: '/soil-report',component:require('./components/soilreport.vue').default},
     {path: '/myrecord',component:require('./components/myrecord.vue').default},
+    {path: '/requestaids',component:require('./components/requestaids.vue').default},
+    {path: '/soiltest',component:require('./components/soiltest.vue').default},
 ]
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
