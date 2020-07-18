@@ -13,7 +13,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper" id ="app">
+<div class="wrapper" id ="app" > 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -72,7 +72,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="{{route('farmerhome')}}" class="nav-link active">	         
+            <a href="" class="nav-link active">	         
                 <i class="nav-icon fas fa-tachometer-alt"></i>	             
                 <p>	           
                   Dashboard	            
@@ -81,7 +81,7 @@
           </li>	     
 
           <li class="nav-item">
-            <router-link to="/user" class="nav-link">
+            <router-link to="/soil-report" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
                   All Reports
@@ -112,8 +112,8 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+  <div class="content-wrapper" style="background-image: url('image/logo.png');height:50%; background-position: center;background-repeat: no-repeat;background-size:fill">
+    <!-- Content Header (Page header) -->;
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -132,9 +132,11 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content" >
       <div class="container-fluid">
+    
          <router-view></router-view> 
+         <vue-progress-bar></vue-progress-bar>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

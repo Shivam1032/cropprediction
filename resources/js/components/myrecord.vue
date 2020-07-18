@@ -48,24 +48,29 @@ export default {
     data(){
         return{
         history:{},
-        id:"",
+        user:'',
         }
        },
-methods:{
+computed:{
     loadhistory(){
-        var _this =this.id;
-        console.log(_this);
-            axios.get(`api/history`).then(({ data })=>{this.history = data});
+        // var _this =this.user;
+        // console.log(_this);
+            axios.get(`api/history/${this.user}`).then(({ data })=>{this.history = data});
     }
 },created()
     {
-        axios.get("/getuserid").then(({ data })=>{this.id = data});
-        this.loadhistory();
+            this.$getLocation(options)
+  .then(coordinates => {
+    console.log(coordinates);
+  });
+
+        axios.get("/getuserid").then(({ data })=>{this.user = data});
+       // this.loadhistory();
     }
-    ,mounted()
-    {
-        axios.get("/getuserid").then(({ data })=>{this.id = data});
-        // axios.get("/getuserid").then(({ data2 })=>{this.id = data2});
-    }
+    // ,mounted()
+    // {
+    //     axios.get("/getuserid").then(({ data })=>{this.id = data});
+    //     // axios.get("/getuserid").then(({ data2 })=>{this.id = data2});
+    // }
 }
 </script>

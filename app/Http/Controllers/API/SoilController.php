@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Soil;
 
 class SoilController extends Controller
 {
@@ -14,9 +15,8 @@ class SoilController extends Controller
      */
     public function index()
     {
-        //
+        return Soil::all();
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -38,7 +38,6 @@ class SoilController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -50,7 +49,6 @@ class SoilController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

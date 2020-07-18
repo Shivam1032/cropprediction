@@ -11,6 +11,10 @@ window.Vue = require('vue');
 
 import {Form,HasError, AlertError } from 'vform';
 import moment from 'moment';
+import VueProgressBar from 'vue-progressbar'
+import VueGeolocation from 'vue-browser-geolocation';
+
+
 
 window.Form = Form;
 Vue.component(HasError.name, HasError)
@@ -19,7 +23,21 @@ Vue.component(AlertError.name, AlertError)
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
+Vue.use(VueGeolocation);
 
+const options = {
+    color: '#bffaf3',
+    failedColor: '#874b4b',
+    thickness: '5px',
+    transition: {
+      speed: '0.2s',
+      opacity: '0.6s',
+      termination: 300
+    },
+    autoRevert: true,
+    location: 'left',
+    inverse: false
+  }
 
 
 
@@ -56,6 +74,7 @@ Vue.component(
     'passport-personal-access-tokens',
     require('./components/passport/PersonalAccessTokens.vue').default
 );
+
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
     

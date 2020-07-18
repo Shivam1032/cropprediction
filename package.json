@@ -29,6 +29,8 @@
         "font-awesome": "^4.7.0",
         "moment": "^2.27.0",
         "vform": "^1.0.1",
+        "vue-browser-geolocation": "^1.8.0",
+        "vue-progressbar": "^0.7.5",
         "vue-router": "^3.3.4"
     }
 }

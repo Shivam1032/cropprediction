@@ -29,9 +29,14 @@ Route::get('/buyer','PrivateCompanyController@index')->name('buyer');
 Route::get('/farmer','FarmerController@index')->name('farmer');
 
 Route::get('/getuserid', function(){
-    $data['id'] = Auth::user()->id;
-    return response()->json($data,200);
+    // $data['id'] = Auth::user()->id;
+    // return response()->json($data,200);
+    return Auth::user()->id;
   });
+
+
+
+  
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

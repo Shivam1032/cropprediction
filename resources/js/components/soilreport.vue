@@ -12,7 +12,7 @@
                                      <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                                   </div>
       
-                                  <button  class="btn btn-primary ml-2 mr-4" data-toggle="modal" data-target="#adduser"><i class="fa fa-plus"></i></button>
+                                  <!-- <button  class="btn btn-primary ml-2 mr-4" data-toggle="modal" data-target="#adduser"><i class="fa fa-plus"></i></button> -->
                           </div>
                      </div>
                   </div>
@@ -24,7 +24,7 @@
                         </div>
                         
                         <div class="row">
-                           <div class="col-sm-12">
+                           <div class="col-sm-12 table-responsive">
                                 <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                                        <thead>
                                              <tr role="row">
@@ -126,9 +126,18 @@
 
 <script>
 export default {
-    mounted()
+    data(){
+        report:{};
+    }
+    ,mounted()
     {
         console.log('Component Mounted')
+
+    },methods:{
+        loadreport()
+        {
+            axios.get("api/soiltesting").then(({ data })=>{this.report = data});
+        }
     }
 }
 </script>
