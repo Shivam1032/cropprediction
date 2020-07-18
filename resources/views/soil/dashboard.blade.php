@@ -79,20 +79,19 @@
                 </p>	     
               </a>	      
           </li>	     
-
+          <li class="nav-item">
+            <router-link to="/soil-report" class="nav-link">
+                <i class="nav-icon fas fa-bookmark"></i>
+                <p>
+                  Test
+                </p>
+            </router-link>
+          </li>
           <li class="nav-item">
             <router-link to="/soil-report" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
                   All Reports
-                </p>
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/user" class="nav-link">
-                <i class="nav-icon fas fa-bookmark"></i>
-                <p>
-                  Report Farmer wise
                 </p>
             </router-link>
           </li>
