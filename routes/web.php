@@ -35,15 +35,19 @@ Route::get('/soiltester/home','SoilTesterController@home')->name('soiltesterhome
 Route::get('/buyer/home','PrivateCompanyController@home')->name('buyerhome');
 Route::get('/farmer/home','FarmerController@home')->name('farmerhome');
 
-Route::get('/getuserid', function(){
-    // $data['id'] = Auth::user()->id;
-    // return response()->json($data,200);
-    return Auth::user()->id;
-  });
+// Route::get('/getuserid', function(){
+//     // $data['id'] = Auth::user()->id;
+//     // return response()->json($data,200);
+//     return Auth::user()->id;
+//   });
+
+  Route::Resources([
+    'user' => 'WEB\UserController',
+    'soiltesting' => 'WEB\SoilController',
+    'history' => 'WEB\HistoryController',
+]);
 
 
-
-  
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

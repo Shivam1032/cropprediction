@@ -53,15 +53,21 @@ export default {
 
         }
        },
-computed:{
+methods:{
     loadhistory(){
             //var _this =this.user;
             //console.log(_this);
-            axios.get(`api/history/${this.user}`).then(({ data })=>{this.history = data});
+            // $uid=Auth::user()->id;
+           axios.get('api/user').then(response => {
+   console.log(response.body);
+})
+            axios.get(`history/{{Auth::user()->id}}`).then(({ data })=>{this.history = data});
+
     }
 },mounted()
     {
-        axios.get("/getuserid").then(({ data })=>{this.user = data});
+       // axios.get("/getuserid").then(({ data })=>{this.user = data});
+       this.loadhistory();
     }
 }
 </script>

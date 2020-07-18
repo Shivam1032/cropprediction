@@ -4,12 +4,11 @@
          <div class="col-md-12">
              <div class ="card card-default">
                   <div class ="card-header">
-                <form id="logout-form" action=" " method="POST" style="display: none;">
-                      @csrf
+                       <form id="logout-form" @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
                       <button type="submit" class="btn btn-primary btn-block"> REQUEST FOR SOIL TESTING</button>
                 </form>
-
                   </div>
+
                  <div class="card-body">
                     <div  class="dataTables_wrapper dt-bootstrap4">
                         <div class="row">
@@ -21,7 +20,7 @@
                                 <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                                        <thead>
                                              <tr role="row">
-                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user name">User Name</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user name">Name</th>
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="user email">E-mail</th>
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="District">District</th>
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="">Village</th>
@@ -55,10 +54,15 @@
 export default {
   data()
   {
-
-  },created()
-  {
-      
+    return{
+      form :new Form({
+        name:''
+      })
+    }
+  },methods:{
+      soiltesting(){
+          this.form.post('soiltesting');
+      }
   },
     mounted()
     {

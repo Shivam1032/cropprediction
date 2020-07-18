@@ -15,6 +15,11 @@ class PrivateCompanyController extends Controller
 
     public function index()
     {
+        return view('buyer.dashboard');
+    }
+
+    public function home()
+    {
         return view('buyer.home');
     }
 }

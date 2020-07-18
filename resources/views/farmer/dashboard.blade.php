@@ -75,7 +75,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="#" class="nav-link active">	         
+          <a href="{{ route('farmerhome') }}" class="nav-link active">	         
               <i class="nav-icon fas fa-tachometer-alt"></i>	             
               <p>	           
                 Dashboard	            
@@ -127,7 +127,7 @@
           </li>
          
           <li class="nav-item">	    
-            <router-link to="/user" class="nav-link">
+            <router-link to="/soiltest" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
               <p>Soil Testing
                 <!-- <span class="right badge badge-danger">New</span> -->	             
@@ -221,7 +221,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-         <router-view></router-view> 
+      
+      <router-view></router-view>
+      
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

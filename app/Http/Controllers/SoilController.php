@@ -13,10 +13,7 @@ class SoilController extends Controller
     {
         return App\Soil::create([
             'farmer_id'=>$data['farmer_id'],
-            
-
-
-
+        
         ]);
     }
 

@@ -15,6 +15,11 @@ class SeedDistributionController extends Controller
 
     public function index()
     {
+        return view('seed.dashboard');
+    }
+
+    public function home()
+    {
         return view('seed.home');
     }
 }

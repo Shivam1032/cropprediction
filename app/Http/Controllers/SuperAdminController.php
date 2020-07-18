@@ -15,6 +15,11 @@ class SuperAdminController extends Controller
 
     public function index()
     {
+        return view('superadmin.dashboard');
+    }
+
+    public function home()
+    {
         return view('superadmin.home');
     }
 }

@@ -19,11 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResources([
-        'user' => 'API\UserController',
-        'soiltesting' => 'API\SoilController',
-        'history' => 'API\HistoryController',
-    ]);
+
 
 
     // Route::group(['middleware' => ['auth']], function(){
