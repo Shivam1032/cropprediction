@@ -120,32 +120,29 @@
           </li>
 
           <li class="nav-item">
-            <router-link to="/user" class="nav-link">
-              <i class="nav-icon fa fa-square"></i>
-              <p>
-                Media
-              </p>
-            </router-link>
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-bug"></i>
+                <p>
+                  Report a problem
+                </p>
+              </a>
           </li>
-
           <li class="nav-item">
-            <router-link to="/user" class="nav-link">
-              <i class="nav-icon fas fa-flag"></i>
-              <p>
-                Report A Problem
-              </p>
-            </router-link>
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-map-marker"></i>
+                <p>
+                  Contact Us
+                </p>
+              </a>
           </li>
-
-
-              <li class="nav-item">
-                <router-link to="/contact-us" class="nav-link">
-                  <i class="fa fa-search nav-icon"></i>
-                  <p>Contact us</p>
-                </router-link>
-              </li>
-            
-          </li>	      
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-sign-out"></i>
+                <p>
+                  Logout
+                </p>
+              </a>
+          </li>     
         </ul>	 
       </nav>
       <!-- /.sidebar-menu -->

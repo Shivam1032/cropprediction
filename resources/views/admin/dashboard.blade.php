@@ -94,10 +94,76 @@
             <router-link to="/test" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Soil Testing
+                Manage User
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </router-link>
+          </li>
+          
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-flag"></i>
+              <p>
+                Report
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: block;">
+              <li class="nav-item">
+                <a href="../layout/top-nav.html" class="nav-link">
+                  <i class="fa fa-snowflake nav-icon"></i>
+                  <p>Soil Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                  <i class="nav-icon fa fa-snowflake"></i>
+                  <p>Seed Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../layout/boxed.html" class="nav-link">
+                  <i class="fa fa-snowflake nav-icon"></i>
+                  <p>Fertilizer Report</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <router-link to="/test" class="nav-link">
+              <i class="nav-icon fa fa-paper-plane"></i>
+              <p>
+                Post Notice
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-bug"></i>
+                <p>
+                  Report a problem
+                </p>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-map-marker"></i>
+                <p>
+                  Contact Us
+                </p>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-sign-out"></i>
+                <p>
+                  Logout
+                </p>
+              </a>
           </li>
 
         </ul>

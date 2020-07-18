@@ -101,10 +101,43 @@
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Soil Testing
+                Distribute Seeds
                 <!-- <span class="right badge badge-danger">New</span> -->
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Distribute Fertilizer
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-bug"></i>
+                <p>
+                  Report a problem
+                </p>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-map-marker"></i>
+                <p>
+                  Contact Us
+                </p>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-sign-out"></i>
+                <p>
+                  Logout
+                </p>
+              </a>
           </li>
         </ul>
       </nav>
