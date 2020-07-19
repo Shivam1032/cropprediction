@@ -35,11 +35,13 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right">
-
+          <a class="dropdown-item" href="">
+            {{ __('Profile') }}
+          </a>
           <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                </form>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
           </div>
       </li>
     </ul>
@@ -148,7 +150,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('image/logo.png');height:50%; background-position: center;background-repeat: no-repeat;background-size:fill">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">

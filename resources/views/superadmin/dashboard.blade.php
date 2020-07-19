@@ -21,6 +21,8 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
+     
+    </ul>
         <!-- TOP NAVIGATION BAR -->
                             <!-- Right Side Of Navbar -->
               <ul class="navbar-nav ml-auto">
@@ -32,6 +34,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="">
+                                        {{ __('Profile') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -159,7 +165,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-sign-out"></i>
+                <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout
                 </p>
@@ -173,7 +179,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('image/logo.png');height:50%; background-position: center;background-repeat: no-repeat;background-size:fill">
 
     <!-- Main content -->
     <section class="content">

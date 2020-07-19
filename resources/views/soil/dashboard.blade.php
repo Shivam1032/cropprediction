@@ -33,6 +33,9 @@
           <span class="caret"></span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="">
+          {{ __('Profile') }}
+         </a>
           <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
@@ -80,7 +83,7 @@
               </a>	      
           </li>	     
           <li class="nav-item">
-            <router-link to="/soiltest" class="nav-link">
+            <router-link to="/testsoil" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
                   Test
@@ -113,7 +116,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-sign-out"></i>
+                <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout
                 </p>
