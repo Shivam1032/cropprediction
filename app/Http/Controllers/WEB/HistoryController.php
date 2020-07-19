@@ -5,6 +5,7 @@ namespace App\Http\Controllers\WEB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\History;
+use Auth;
 
 
 class HistoryController extends Controller
@@ -16,8 +17,10 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        //
-        return History::all();
+        //dd(Auth::id());
+        $id= Auth::id();
+       // dd('Hello');
+        return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
     }
 
     /**
@@ -40,7 +43,7 @@ class HistoryController extends Controller
     public function show($id)
     {
         //
-         return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
+        // return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
     }
 
     /**
