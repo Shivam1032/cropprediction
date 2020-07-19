@@ -45,8 +45,8 @@
                   <td>nicemohit260@gmail.com</td>
                   <td class="sorting_1">Gaurella-Pendra-Marwahi</td>
                   <td class="sorting_1">Gaurella</td>
-                  <td><button type="button" class="btn btn-primary btn-block">Edit</button></td>
-                  <td><button type="button" class="btn btn-danger btn-block">Delete</button></td>
+                  <td><button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#adduser">Edit</button></td>
+                  <td><button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#alert_delete_modal">Delete</button></td>
                 </tr>
                 </tbody>
               </table>
@@ -60,34 +60,79 @@
         </div>
 
         
-<div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="add user" aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content model-lg">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <form @submit.prevent = "createuser">
-         <div class="form-group row">
-            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-          <input type="email" id="defaultForm-email" class="form-control validate">
+  <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="add user" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content model-lg">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add a new user</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add User</button>
-      </div>
-        </form>
-      </div>
+        <div class="modal-body">
+          <form @submit.prevent = "createuser">
+          <div class="row p-3">
+            <div class="col-12 form-group">
+              <label data-error="wrong" data-success="right" for="user_name">Name</label>
+              <input type="text" id="user_name" class="form-control validate">
+            </div>
+            <div class="col-12 form-group">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Email Id</label>
+                <input type="email" id="defaultForm-email" class="form-control validate">
+            </div>
+            <div class="col-12 form-group">
+                <label data-error="wrong" data-success="right" for="mobile_number">Mobile Number</label>
+                <input type="number" id="mobile_number" class="form-control validate">
+            </div>
+            <div class="col-12 form-group">
+                <label data-error="wrong" data-success="right" for="aadhar_number">Aadhar Card Number</label>
+                <input type="number" id="aadhar_number" class="form-control validate">
+            </div>
+            <div class="col-12 form-group">
+              <label data-error="wrong" data-success="right" for="role">Role</label>
+                <select id="role" class="form-control" name="role">
+                    <option value="2">Soil Distributer</option>
+                    <option value="3">Soil Tester</option>                    
+                </select>
+            </div>
+
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add User</button>
+        </div>
+          </form>
+        </div>
 
 
+      </div>
     </div>
   </div>
-</div>
+  <div class="modal fade" id="alert_delete_modal" tabindex="-1" role="dialog" aria-labelledby="add user" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title white" id="">Attention!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+            Are you sure to delete the selected user?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
+            <span class="d-none d-sm-block">Close</span>
+          </button>
+          <button type="button" class="btn btn-danger ml-1" data-dismiss="modal">
+            <span class="d-none d-sm-block">Accept</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 

@@ -21,17 +21,26 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
+     
+    </ul>
         <!-- TOP NAVIGATION BAR -->
-                            <!-- Right Side Of Navbar -->
+
+              
+
+
               <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                                                <div class="float-right">
+                          <div class="float-right">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     Admin <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    
+                                    <a class="dropdown-item" href="">
+                                        {{ __('Profile') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -69,8 +78,6 @@
       
         </div>
         <div class="info">
-        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-        <!-- <span class="fa fa-user"> -->
           <a href="#" class="d-block">Admin</a>
           <!-- </span> -->
         </div>
@@ -91,7 +98,7 @@
         </li>
 
           <li class="nav-item">
-            <router-link to="/test" class="nav-link">
+            <router-link to="/manageuser" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage User
@@ -159,7 +166,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-sign-out"></i>
+                <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout
                 </p>
@@ -173,7 +180,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-image: url('image/logo.png');height:50%; background-position: center;background-repeat: no-repeat;background-size:fill">
 
     <!-- Main content -->
     <section class="content">
