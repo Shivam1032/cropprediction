@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <div class="row justify-content-center mt-3">
-      <div class="col-md-12">
+      <div class="col-md-8">
           <div class ="card card-default">
               <div class ="card-header">
                   <h3>Contact Us</h3>
@@ -14,12 +14,8 @@
 								<div class="col-12">
 									<div class="form-group">
 										<label>Name</label>
-										<div class="position-relative has-icon-left">
-											<input type="text" class="form-control" name="fname-icon" id="full name" placeholder="Enter Your Full Name" required="">
-											<div class="form-control-position">
-												<i class="fa fa-user"></i>
-											</div>
-										</div>
+										<input type="text" class="form-control" name="fname-icon" id="full name" placeholder="Enter Your Full Name" required="">
+										
 									</div>
 								</div>
 								<div class="col-12">
