@@ -1,4 +1,3 @@
-
 <template>
   <div class="container">
       <div class="row justify-content-center mt-3">
@@ -43,8 +42,8 @@
   </div>
   </div>
 </template>
-
 <script>
+
 export default {
     data(){
         return{
@@ -55,7 +54,7 @@ export default {
        },
 methods:{
     loadhistory(){
-     axios.get(`history`).then(({ data })=>{this.history = data});
+     axios.get('http://127.0.0.1:8000/history').then(({ data })=>{this.history = data});
 }},mounted()
     {
        // axios.get("/getuserid").then(({ data })=>{this.user = data});

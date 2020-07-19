@@ -50,6 +50,7 @@ let routes =
     {path: '/myrecord',component:require('./components/myrecord.vue').default},
     {path: '/requestaids',component:require('./components/requestaids.vue').default},
     {path: '/testsoil',component:require('./components/soiltest.vue').default},
+    {path: '/profile',component:require('./components/profile.vue').default},
 ]
 
 /**
