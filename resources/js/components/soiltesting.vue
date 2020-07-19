@@ -5,7 +5,7 @@
              <div class ="card card-default">
                   <div class ="card-header">
                        <form id="logout-form" @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
-                      <button type="submit" class="btn btn-primary btn-block"> {{__('REQUEST FOR SOIL TESTING')}}</button>
+                      <button type="submit" class="btn btn-primary btn-block">REQUEST FOR SOIL TESTING</button>
                 </form>
                   </div>
 

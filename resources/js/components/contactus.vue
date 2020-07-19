@@ -2,53 +2,71 @@
   <div class="container">
       <div class="row justify-content-center mt-3">
 		<div class="col-md-8">
-			<div class ="card card-default">
-				<div class ="card-header">
-					<h3>Contact Us</h3>
-				</div>
+			<div class="row">
+                        <div class="col-sm-4 col-12" >
+                            <div class="text-center">
+                                <div class="card-content">
+                                    <div class="card-body py-1">
+                                        <div class="mx-auto mb-50">
+                                            <i class="fa fa-map-marker" style="font-size:2rem;"></i>
+                                        </div>
+                                        <div class="text-muted line-ellipsis"><h4>Where to find us</h4></div>
+                                        <lable class="mb-0">Bhilai</lable><br>
+                                        <lable class="mb-0">Durg, Chhattisgarh</lable>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-12" >
+                            <div class="text-center">
+                                <div class="card-content">
+                                    <div class="card-body py-1">
+                                        <div class="mx-auto mb-50">
+                                            <i class="fa fa-phone" style="font-size:2rem;"></i>
+                                        </div>
+                                        <div class="text-muted line-ellipsis"><h4>Call Us At</h4></div>
+                                        <lable class="mb-0">+91 1234567890</lable><br>
+                                        <lable class="mb-0">+91 1234567890</lable>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-12" >
+                            <div class="text-center">
+                                <div class="card-content">
+                                    <div class="card-body py-1">
+                                        <div class="mx-auto mb-50">
+                                            <i class="fa fa-envelope" style="font-size:2rem;"></i>
+                                        </div>
+                                        <div class="text-muted line-ellipsis"><h4>Email Us At</h4></div>
+                                        <lable class="mb-0">abc@test.com</lable><br>
+                                        <lable class="mb-0">kbfms@helpline.in</lable>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="card-body">
-						<form class="form form-vertical">
-							<div class="form-body">
-								<div class="row">
-									<div class="col-12">
-										<div class="form-group">
-											<label>Name</label>
-											<input type="text" class="form-control" name="fname-icon" id="full name" placeholder="Enter Your Full Name" required="">
-											
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<label>Email</label>
-											<input type="email" class="form-control" name="email-id-icon" id="Email" placeholder="Email ID" required="">
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<label>Subject</label>
-											<input type="text" class="form-control" name="fname-icon" id="subject" placeholder="Subject" required="">
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-group">
-											<label>Message</label>
-											<textarea class="form-control" rows="3" placeholder="Enter Message Here" id="contact-us-form-element" spellcheck="false" required=""></textarea>
-										</div>
-									</div>
-									<div class="col-12 d-flex justify-content-end">
-										<button type="submit" class="btn btn-dark mr-1 mb-1">Send</button>
-										<button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>   
-			</div>
+                    </div>
 		</div>
       </div>    
   </div>
 </template>
+
+<script>
+export default {
+    mounted()
+    {
+        console.log('Component Mounted')
+    }
+}
+</script>
+
+
+
+
+
+
+
 
 <script>
 export default {
