@@ -16,7 +16,6 @@ class SoilController extends Controller
      */
     public function index()
     {
-        
           return Soil::all();
     }
     /**
