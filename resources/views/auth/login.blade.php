@@ -76,13 +76,14 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="email-id-vertical">{{ __('E-Mail / Mobile') }}</label>
-                                        <input type="text" id="email" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="{{ __('E-Mail / Mobile') }}" value = "{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input type="text" id="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('E-Mail / Mobile') }}" value = "{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                        @error('username')
+                                        @error('email')
                                              <span class="invalid-feedback" role="alert">
                                                <strong>{{ $message }}</strong>
                                              </span>
                                          @enderror
+
                                     </div>
                                 </div>
 

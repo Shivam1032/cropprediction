@@ -85,24 +85,23 @@ class LoginController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    protected function sendFailedLoginResponse(\Illuminate\Http\Request $request)
-    {
-        throw \Illuminate\Validation\ValidationException::withMessages([
-            $this->username() => [trans('auth.failed')],
-        ]);
-    }
+    // protected function sendFailedLoginResponse(\Illuminate\Http\Request $request)
+    // {
+    //     throw \Illuminate\Validation\ValidationException::withMessages([
+    //         $this->username() => [trans('auth.failed')],
+    //     ]);
+    // }
 
-        public function username(){
-            $login = request()->input('username');
-            if(is_numeric($login)){
-                $field = 'mobile';
-            } elseif(filter_var($login,FILTER_VALIDATE_EMAIL)){
-                $field='email';
-            }else{
-                $field = 'email';
-            }
-            request()->merge([$field=>$login]);
-            return $field;
-        }
+    //     public function credentials()
+    //     {
+    //         $login = request()->input('username');
+    //         if(is_numeric($login)){
+    //             $field = 'mobile';
+    //         }else{
+    //             $field = 'email';
+    //         }
+    //         request()->merge([$field=>$login]);
+    //         return $field;
+    //     }
 
 }
