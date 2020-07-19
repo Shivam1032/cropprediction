@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Auth;
+use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -74,5 +75,34 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    
+        /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function sendFailedLoginResponse(\Illuminate\Http\Request $request)
+    {
+        throw \Illuminate\Validation\ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+        ]);
+    }
+
+        public function username(){
+            $login = request()->input('username');
+            if(is_numeric($login)){
+                $field = 'mobile';
+            } elseif(filter_var($login,FILTER_VALIDATE_EMAIL)){
+                $field='email';
+            }else{
+                $field = 'email';
+            }
+            request()->merge([$field=>$login]);
+            return $field;
+        }
 
 }
