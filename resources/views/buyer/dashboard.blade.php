@@ -47,8 +47,7 @@
                                         {{ __('Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -135,15 +134,15 @@
               </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+             <router-link to="/contact-us" class="nav-link">
                 <i class="nav-icon fa fa-map-marker"></i>
                 <p>
                   Contact Us
                 </p>
-              </a>
+                </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="nav-link">
                 <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout

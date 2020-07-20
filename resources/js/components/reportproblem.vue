@@ -63,10 +63,10 @@ export default {
         console.log('Component Mounted')
     },data(){
 		return{
-			form:new Form({
-				name ='',
+			// form:new Form({
+			// 	name ='',
 
-			}),
+			// }),
 		}
 	},methods:{
 		reportaproblem(){
