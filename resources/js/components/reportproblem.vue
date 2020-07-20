@@ -63,14 +63,17 @@ export default {
         console.log('Component Mounted')
     },data(){
 		return{
-			form:new Form({
-				name ='',
-
-			}),
+		 form:new Form({
+				 name:'',
+				 email:'',
+				 subject:'',
+				 message:'',
+		 }),
 		}
 	},methods:{
-		reportaproblem(){
-
+		 reportaproblem(){
+			 //TODO PROBLEM REQUEST
+			 	form.axios.post('');
 		}
 	}
 }

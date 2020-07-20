@@ -13,16 +13,16 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+    <!-- <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
      
-    </ul>
+    </ul> -->
         <!-- TOP NAVIGATION BAR -->
                             <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -59,9 +59,6 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
-            </div>
-       
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -80,13 +77,12 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <!-- <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
-      
+          <img src="/image/user.jpg" class="img-circle elevation-2" style = "width:40px;height:40px"alt="User Image">
         </div>
         <div class="info">
         <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
         <!-- <span class="fa fa-user"> -->
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          <router-link to="profile" class="d-block" style="color:#ffffff">{{ Auth::user()->name }}</router-link>
           <!-- </span> -->
         </div>
       </div>
@@ -102,6 +98,8 @@
                 </p>
               </a>
           </li>
+
+          <!-- TODO MY DEAL PAGE -->
           <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
@@ -110,13 +108,14 @@
                 </p>
               </a>
           </li>
+
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="buyapplication" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
                   Submit Application
                 </p>
-              </a>
+              </router-link>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -127,15 +126,16 @@
               </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="reportproblem" class="nav-link">
                 <i class="nav-icon fa fa-bug"></i>
                 <p>
                   Report a problem
                 </p>
-              </a>
+              </router-link>
+
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="contact-us" class="nav-link">
                 <i class="nav-icon fa fa-map-marker"></i>
                 <p>
                   Contact Us
@@ -143,7 +143,7 @@
               </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a  class="nav-link"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout

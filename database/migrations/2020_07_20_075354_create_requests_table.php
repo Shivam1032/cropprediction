@@ -13,8 +13,12 @@ class CreateRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table)
+        {
             $table->id();
+            $table->string('name',100);
+            $table->string('subject',150);
+            $table->string('description',300);
             $table->timestamps();
         });
     }
@@ -28,4 +32,5 @@ class CreateRequestsTable extends Migration
     {
         Schema::dropIfExists('requests');
     }
+
 }
