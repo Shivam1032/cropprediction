@@ -4,6 +4,13 @@
          <div class="col-md-12">
              <div class ="card card-default">
                   <div class ="card-header">
+                    <label>Cycle</label>
+                      <select id="cycle" class="form-control" name="role" value ="">
+                          <option value="c1">{{ __('Cycle 1') }}</option>
+                          <option value="c2">{{ __('Cycle 2') }}</option>
+                                  
+                      </select>
+
                        <form id="logout-form" @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
                       <button type="submit" class="btn btn-primary btn-block">REQUEST FOR SOIL TESTING</button>
                 </form>
