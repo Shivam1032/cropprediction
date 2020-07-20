@@ -123,24 +123,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="reportproblem" class="nav-link">
                 <i class="nav-icon fa fa-bug"></i>
                 <p>
                   Report a problem
                 </p>
-              </a>
+            </router-link>
+
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="contact-us" class="nav-link">
                 <i class="nav-icon fa fa-map-marker"></i>
                 <p>
                   Contact Us
                 </p>
-              </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-sign-out"></i>
+            <a  class="nav-link"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                   Logout
                 </p>
