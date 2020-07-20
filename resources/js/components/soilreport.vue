@@ -109,8 +109,7 @@
                                     </div>
                                     
                                     <div class="col-sm-12 d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Update</button>
-                                        <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
+                                        <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Update</button>
                                     </div>
                                 </div>
                             </div>
