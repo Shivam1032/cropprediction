@@ -12,7 +12,7 @@ class Soil extends Model
     // const CREATED_AT = 'creation_date';
 
     protected $fillable = [
-        'farmer_id','soil_test_id','nitrogen','phosphorus','pottasium','rainfall','status',
+        'farmer_id','soil_test_id','nitrogen','phosphorus','pottasium','rainfall','ph','status',
     ];
 
     

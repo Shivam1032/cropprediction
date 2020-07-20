@@ -60,8 +60,10 @@
                                         <input type="text" id="first-name" class="form-control" name="K" placeholder="K">
                                     </div>
                                     <div class="col-sm-12">
+                                        <form >
                                         <button type="submit" class="btn btn-primary mr-1 mb-1">Update</button>
                                         <button type="reset" class="btn btn-light-secondary mr-1 mb-1">Reset</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

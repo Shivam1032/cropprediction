@@ -17,6 +17,7 @@ class CreateSoilTestingTable extends Migration
             $table->id();
             $table->foreignId('farmer_id');        
             $table->foreignId('soil_test_id')->nullable();
+            $table->smallInteger('ph')->nullable();
             $table->smallInteger('nitrogen')->nullable();
             $table->smallInteger('phosphorus')->nullable();
             $table->smallInteger('potasium')->nullable();

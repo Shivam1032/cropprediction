@@ -14,7 +14,7 @@
                     </div>
                  <div class="row">
                      <div class="col-sm-12 table-responsive">
-                    <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="User Managment">
+                    <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" >
                 <thead class="thead-dark">
                
                 <tr role="row">
@@ -22,7 +22,6 @@
                     <th>Description</th>
                 </tr>
                 </thead>
-
 
                 <tbody>
                 <tr v-for="his in history" :key="his.id"> 
