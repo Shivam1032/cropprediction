@@ -13,7 +13,9 @@
 
                     <div class ="card-footer">
                         <div class="col-sm-12 d-flex justify-content-end">
+                        <form  @submit.prevent="sendlabourrequest" @keydown="form.onKeydown($event)">
                             <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
+                            </form>
                         </div>
                     </div>
             </div>
@@ -29,7 +31,9 @@
                     </div>   
                      <div class ="card-footer">
                         <div class="col-sm-12 d-flex justify-content-end">
+                            <form  @submit.prevent="sendirrigationrequest" @keydown="form.onKeydown($event)">
                             <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
+                            </form>
                         </div>
                     </div>
             </div>
@@ -39,17 +43,17 @@
                 <div class ="card-header">
                     <h3><center>Farm Machinary</center></h3>
                 </div>
-
                     <div class="card-body" style="padding:0px;" >
-                        <img src="../../../public/image/farmer.jpg" class="img-fluid">
+                        <img src="/image/farmer.jpg" class="img-fluid">
                     </div>   
                     <div class ="card-footer">
-                        <div class="col-sm-12 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
-                        </div>
+                            <form  @submit.prevent="sendmachinerequest" @keydown="form.onKeydown($event)">
+                                <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
+                            </form>
                     </div>
-            </div>
+              </div>
         </div>
+
       </div>    
   </div>
 </template>
@@ -59,6 +63,38 @@ export default {
     mounted()
     {
         console.log('Component Mounted')
+    },
+    data(){
+        return{
+
+        }
+    },methods:{
+
+        sendlabourrequest(){
+         axios.post('http://127.0.0.1:8000/request',{
+
+        })
+        axios.post('http://127.0.0.1:8000/history',{
+                description:'Labour Request'
+        })
+        },
+
+        sendirrigationrequest(){
+         axios.post('http://127.0.0.1:8000/request',{
+
+         })
+        axios.post('http://127.0.0.1:8000/history',{
+                description:'Irrigation Request'
+        })
+        },
+        sendmachinerequest(){
+         axios.post('http://127.0.0.1:8000/request',{
+                    
+         })
+        axios.post('http://127.0.0.1:8000/history',{
+                description:'Machine Request'
+        })
+        }
     }
 }
 </script>
