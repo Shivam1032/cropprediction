@@ -30,7 +30,6 @@ class SoilController extends Controller
             'farmer_id' => Auth::id(),
             'status' => "Requested For Soil Testing",
         ]);
-
     }
 
     /**
@@ -53,6 +52,9 @@ class SoilController extends Controller
     public function update(Request $request, $id)
     {
         //
+                
+
+
     }
     /**
      * Remove the specified resource from storage.
