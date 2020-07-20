@@ -15,4 +15,5 @@ class Soil extends Model
         'farmer_id','soil_test_id','nitrogen','phosphorus','pottasium','rainfall','status',
     ];
 
+    
 }

@@ -9,7 +9,9 @@
                                   
                               <input type="text" class="form-control">
                                   <div class="input-group-append">
+                                    <form @submit.prevent="searchrequest" @keydown="form.onKeydown($event)">
                                      <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                                    </form>
                                   </div>
                                   <!-- <button  class="btn btn-primary ml-2 mr-4" data-toggle="modal" data-target="#adduser"><i class="fa fa-plus"></i></button> -->
                           </div>
@@ -64,26 +66,10 @@
                                 </div>
                             </div>
                         </form>
-                        </div>   
-                     </div>
+                    </div>   
+                </div>
              </div>
          </div>
-
-         <div class="modal fade text-left modal-borderless" id="one_report_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Report(Sno./Farmer Id)</h3>
-                        <button type="button" class="close rounded-pill" data-dismiss="modal" aria-label="Close">
-                            <i class="bx bx-x"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
       </div>    
   </div>
   </div>
@@ -101,8 +87,13 @@ export default {
     },methods:{
         loadreport()
         {
-            axios.get("api/soiltesting").then(({ data })=>{this.report = data});
+          //  axios.get("api/soiltesting").then(({ data })=>{this.report = data});
+        },
+        searchrequest()
+        {
+                axios.get('');
         }
     }
 }
+
 </script>

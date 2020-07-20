@@ -51,7 +51,8 @@ let routes =
     {path: '/requestaids',component:require('./components/requestaids.vue').default},
     {path: '/testsoil',component:require('./components/soiltest.vue').default},
     {path: '/profile',component:require('./components/profile.vue').default},
-]
+    {path: '/reportproblem',component:require('./components/reportproblem.vue').default},
+] 
 
 /**
  * The following block of code may be used to automatically register your

@@ -61,10 +61,10 @@ export default {
     }
   },methods:{
       soiltesting(){
-          axios.post(`soiltesting`);
+          axios.post('http://127.0.0.1:8000/soiltesting');
       },
       loaddata(){
-           axios.get(`soiltesting`).then(({ data })=>{this.soilreport = data});
+           axios.get('http://127.0.0.1:8000/soiltesting').then(({ data })=>{this.soilreport = data});
       }
   },mounted()
     {

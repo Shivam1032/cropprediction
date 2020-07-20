@@ -31,7 +31,11 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $id= Auth::id();
+         return History::create([
+            'user_id'=>$id,
+           'description'=> $request['description']
+         ]);
     }
 
     /**
