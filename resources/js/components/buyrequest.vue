@@ -23,9 +23,9 @@
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
-                                            <option value="cereals">{{ __('cereals') }}</option>
-                                            <option value="nuts">{{ __('nuts') }}</option>
-                                            <option value="others">{{ __('others') }}</option>
+                                            <option value="cereals">'cereals</option>
+                                            <option value="nuts">nuts</option>
+                                            <option value="others">others</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
@@ -42,8 +42,8 @@
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
-                                            <option value="kg">{{ __('kg') }}</option>
-                                            <option value="tonne">{{ __('tonne') }}</option>
+                                            <option value="kg">'kg'</option>
+                                            <option value="tonne">'tonne'</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
@@ -61,9 +61,9 @@
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
-                                            <option value="abc">{{ __('ABC') }}</option>
-                                            <option value="xyz">{{ __('XYZ') }}</option>
-                                            <option value="others">{{ __('others') }}</option>
+                                            <option value="abc">ABC</option>
+                                            <option value="xyz">XYZ</option>
+                                            <option value="others">others</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
@@ -71,9 +71,9 @@
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
-                                            <option value="abc">{{ __('ABC') }}</option>
-                                            <option value="xyz">{{ __('XYZ') }}</option>
-                                            <option value="others">{{ __('others') }}</option>
+                                            <option value="abc">ABC</option>
+                                            <option value="xyz">XYZ</option>
+                                            <option value="others">others</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
@@ -105,7 +105,9 @@
 <script>
 export default {
     data(){
-        report:{};
+        return{
+            
+        }
     }
     ,mounted()
     {

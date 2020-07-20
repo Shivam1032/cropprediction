@@ -52,6 +52,7 @@ let routes =
     {path: '/testsoil',component:require('./components/soiltest.vue').default},
     {path: '/profile',component:require('./components/profile.vue').default},
     {path: '/reportproblem',component:require('./components/reportproblem.vue').default},
+    {path: '/buyapplication',component:require('./components/buyrequest.vue').default},
 ] 
 
 /**

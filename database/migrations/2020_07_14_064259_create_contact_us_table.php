@@ -15,8 +15,11 @@ class CreateContactUsTable extends Migration
     {
         Schema::create('contact_us', function (Blueprint $table) {
             $table->foreignId('user_id');
-            $table->string('desc',255);
-            $table->string('status',60);
+            // $table->string('desc',255);
+            // $table->string('status',60);
+            $table->string('name',100);
+            $table->string('subject',150);
+            $table->string('description',300);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
