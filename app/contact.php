@@ -4,12 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class contact extends Model
+class Contact extends Model
 {
-   protected $table = 'district_list';
-   protected $primaryKey = 'id';
+   protected $table = 'contact_us';
+    protected $primaryKey = 'id';
    
-   protected $fillable[];
+   protected $fillable=[
+      'user_id','name','mobile','subject','message',
+   ];
 
 
 }

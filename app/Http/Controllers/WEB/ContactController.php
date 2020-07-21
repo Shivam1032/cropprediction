@@ -4,8 +4,9 @@ namespace App\Http\Controllers\WEB;
 
 use App\Http\Controllers\Controller;
 
-use App\contact;
+use App\Contact;
 use Illuminate\Http\Request;
+use Auth;
 
 class ContactController extends Controller
 {
@@ -27,7 +28,18 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id();
+        if(Auth::check())
+        {
+             Contact::create([
+                    'user_id'=>$id,
+                    'name' => $request['name'],
+                    'mobile' => $request['mobile'],
+                    'subject' => $request['subject'],
+                    'message' => $request['message'],
+            ]);  
+        }
+
     }
 
     /**
