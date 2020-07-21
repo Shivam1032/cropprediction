@@ -13,13 +13,13 @@
                             <div class="form-body">
                                 <div class="row p-4">
                                     <div class="col-md-4">
-                                        <label>Full Name</label>
+                                        <label>Full Name<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="text" id="full-name" class="form-control" name="Full Name" placeholder="Full Name" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Product Type</label>
+                                        <label>Product Type<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
@@ -29,13 +29,13 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Product Name</label>
+                                        <label>Product Name<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="text" id="product-name" class="form-control" name="Product Name" placeholder="Product Name" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Quantity</label>
+                                        <label>Quantity<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <input type="number" id="qty" class="form-control" name="quantity" placeholder="Quantity" required>
@@ -47,7 +47,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Offer Price</label>
+                                        <label>Offer Price<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-3 form-group">
                                         <input type="number" id="oprice" class="form-control" name="oprice" placeholder="Price in Rs." required>
@@ -57,7 +57,7 @@
                                         <input type="number" id="oprice" class="form-control" name="oprice" placeholder="Quantity" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>State</label>
+                                        <label>State<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
@@ -67,7 +67,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>District</label>
+                                        <label>District<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
@@ -77,19 +77,19 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Contact</label>
+                                        <label>Contact<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="number" id="mobile-number" class="form-control" name="mobile" placeholder="Mobile Number">
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Email</label>
+                                        <label>Email<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="email" id="email" class="form-control" name="email" placeholder="Email">
                                     </div>
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                        <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Submit</button>
                                     </div>
                                 </div>
                             </div>

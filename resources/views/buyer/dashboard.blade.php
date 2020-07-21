@@ -103,7 +103,7 @@
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
-                  My Deals
+                  My Records
                 </p>
               </a>
           </li>
