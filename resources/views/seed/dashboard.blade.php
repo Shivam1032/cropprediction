@@ -105,22 +105,13 @@
             </a>
         </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Distribute Seeds
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Distribute Fertilizer
-                <!-- <span class="right badge badge-danger">New</span> -->
-              </p>
-            </a>
+            <router-link to="distribution" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                {{__('Distribution')}}
+                </p>
+            </router-link>
+
           </li>
           <li class="nav-item">
             <router-link to="reportproblem" class="nav-link">
