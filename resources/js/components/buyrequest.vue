@@ -9,7 +9,7 @@
                  <div class="card-body">
                         
                         <div class="row">
-                           <form class="form form-horizontal">
+                           <form class="form form-horizontal" @>
                             <div class="form-body">
                                 <div class="row p-4">
                                     <div class="col-md-4">

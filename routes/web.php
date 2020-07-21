@@ -46,7 +46,7 @@ Route::get('/farmer/home','FarmerController@home')->name('farmerhome');
     'soiltesting' => 'WEB\SoilController',
     'history' => 'WEB\HistoryController',
     'request' => 'WEB\RequestController',
-    'conatct' => 'WEB\ContactController',
+    'contact' => 'WEB\ContactController',
 ]);
 
 

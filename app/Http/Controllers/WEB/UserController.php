@@ -4,6 +4,8 @@ namespace App\Http\Controllers\WEB;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
 
 class UserController extends Controller
 {
@@ -14,7 +16,10 @@ class UserController extends Controller
      */
     public function index()
     {
+        $id=Auth::id();
         //
+        //dd($id);
+        return User::where('id',$id)->get();
     }
 
     /**

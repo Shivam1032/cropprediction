@@ -105,11 +105,10 @@
         </div>
           </form>
         </div>
-
-
       </div>
     </div>
   </div>
+  
   <div class="modal fade" id="alert_delete_modal" tabindex="-1" role="dialog" aria-labelledby="add user" aria-hidden="true" >
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
       <div class="modal-content">

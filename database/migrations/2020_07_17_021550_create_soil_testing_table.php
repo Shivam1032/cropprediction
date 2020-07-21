@@ -22,6 +22,8 @@ class CreateSoilTestingTable extends Migration
             $table->smallInteger('phosphorus')->nullable();
             $table->smallInteger('potasium')->nullable();
             $table->smallInteger('rainfall')->nullable();
+            $table->string('crop',50)->nullable();
+            
             $table->string('status',50);
             $table->timestamps();
             

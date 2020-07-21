@@ -34,7 +34,7 @@
                                                 <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Nitrogen">N</th>
                                                 <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Phosphores">P</th> 
                                                 <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Potesium">K</th>
-                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Status">K</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Status">status</th>
                                              </tr>
 
                                         </thead>
@@ -64,16 +64,19 @@
 <script>
 export default {
     data(){
-        report:{};
+        return{
+        report:{}
+        }
     }
     ,mounted()
     {
         console.log('Component Mounted')
+        this.loadreport();
 
     },methods:{
         loadreport()
         {
-            axios.get("soiltesting").then(({ data })=>{this.report = data});
+            axios.get("/soiltesting").then(({ data })=>{this.report = data});
         }
     }
 }

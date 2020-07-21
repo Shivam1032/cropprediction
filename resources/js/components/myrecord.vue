@@ -52,8 +52,14 @@ export default {
         }
        },
 methods:{
+    start () {
+        this.$Progress.start();
+    },
+
     loadhistory(){
+    this.$Progress.start();
      axios.get('http://127.0.0.1:8000/history').then(({ data })=>{this.history = data});
+     this.$Progress.finish();
 }},mounted()
     {
        // axios.get("/getuserid").then(({ data })=>{this.user = data});

@@ -14,29 +14,29 @@
 									<div class="col-12">
 										<div class="form-group">
 											<label>Name</label>
-											<input type="text" class="form-control" name="fname-icon" id="full name" placeholder="Enter Your Full Name" required>
+											<input type="text" v-model="form.name" class="form-control" name="fname-icon" id="full name" placeholder="Enter Your Full Name" required>
 											
 										</div>
 									</div>
 
 									<div class="col-12">
 										<div class="form-group">
-											<label>Email</label>
-											<input type="email" class="form-control" name="email-id-icon" id="Email" placeholder="Email ID" >
+											<label>Mobile</label>
+											<input type="phone" v-model="form.mobile" class="form-control" name="email-id-icon" id="Email" placeholder="Mobile Number" >
 										</div>
 									</div>
 
 									<div class="col-12">
 										<div class="form-group">
 											<label>Subject</label>
-											<input type="text" class="form-control" name="fname-icon" id="subject" placeholder="Subject" required>
+											<input type="text" class="form-control" v-model="form.subject" name="fname-icon" id="subject" placeholder="Subject" required>
 										</div>
 									</div>
 
 									<div class="col-12">
 										<div class="form-group">
 											<label>Message</label>
-											<textarea class="form-control" rows="3" placeholder="Enter Message Here" id="contact-us-form-element" spellcheck="false" required></textarea>
+											<textarea class="form-control" rows="3" v-model="form.message" placeholder="Enter Message Here" id="contact-us-form-element" spellcheck="false" required></textarea>
 										</div>
 									</div>
 
@@ -65,7 +65,7 @@ export default {
 		return{
 		 form:new Form({
 				 name:'',
-				 email:'',
+				 mobile:'',
 				 subject:'',
 				 message:'',
 		 }),
@@ -73,7 +73,7 @@ export default {
 	},methods:{
 		 reportaproblem(){
 			 //TODO PROBLEM REQUEST
-			 	form.axios.post('');
+			 	this.form.post('http://127.0.0.1:8000/contact');
 		}
 	}
 }

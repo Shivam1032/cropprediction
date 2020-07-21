@@ -25,20 +25,11 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 Vue.use(VueGeolocation);
 
-const options = {
-    color: '#bffaf3',
-    failedColor: '#874b4b',
-    thickness: '5px',
-    transition: {
-      speed: '0.2s',
-      opacity: '0.6s',
-      termination: 300
-    },
-    autoRevert: true,
-    location: 'left',
-    inverse: false
-  }
-
+Vue.use(VueProgressBar, {
+    color: 'rgb(0, 0, 0)',
+    failedColor: 'red',
+    height: '4px'
+  })
 
 
 let routes =
@@ -64,6 +55,7 @@ let routes =
  */
 
  const router = new VueRouter({
+     modes:history,
      routes
  })
 

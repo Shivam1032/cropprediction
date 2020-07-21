@@ -27,37 +27,37 @@
                                         <label>Sample Number</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="sample_no" placeholder="2" disabled>
+                                        <input type="text" id="sampleno" class="form-control" name="sample_no" placeholder="2" disabled>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Farmer Name</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="farmer_name" placeholder="Farmer Name" disabled>
+                                        <input type="text" id="name" class="form-control" name="farmer_name" placeholder="Farmer Name" disabled>
                                     </div>
                                     <div class="col-md-4">
                                         <label>pH</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="pH" placeholder="pH">
+                                        <input type="text" id="ph" class="form-control" name="pH" placeholder="pH">
                                     </div>
                                     <div class="col-md-4">
                                         <label>N</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="N" placeholder="N">
+                                        <input type="text" id="nitrogen" class="form-control" name="N" placeholder="N">
                                     </div>
                                     <div class="col-md-4">
                                         <label>P</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="P" placeholder="P">
+                                        <input type="text" id="phosphorus" class="form-control" name="P" placeholder="P">
                                     </div>
                                     <div class="col-md-4">
                                         <label>K</label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="first-name" class="form-control" name="K" placeholder="K">
+                                        <input type="text" id="pottasium" class="form-control" name="K" placeholder="K">
                                     </div>
                                     <div class="col-sm-12">
                                         <form >
@@ -80,16 +80,13 @@
 <script>
 export default {
     data(){
-        report:{};
-    }
-    ,mounted()
-    {
-        console.log('Component Mounted')
-
+        return{
+            report:[],
+        }
     },methods:{
-        loadreport()
+        updatereport()
         {
-          //  axios.get("api/soiltesting").then(({ data })=>{this.report = data});
+            axios.get("/soiltesting").then(({ data })=>{this.report = data});
         },
         searchrequest()
         {

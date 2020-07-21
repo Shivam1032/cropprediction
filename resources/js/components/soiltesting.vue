@@ -5,6 +5,7 @@
              <div class ="card card-default">
                   <div class ="card-header">
                     <center>
+                      <form @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
                     <div class="col-md-8 form-inline">
                     <div class="col-md-2">
                     <!-- <label class="form-inline">Cycle</label> -->
@@ -13,12 +14,20 @@
                           <option value="c2">'Cycle 2'</option>          
                       </select>
                     </div>
-                    <div class="col-md-8" style="margin:0px">
-                      <form id="" @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
+                    <div class="col-md-6" style="margin:0px">
+                      
                       <button type="submit" class="btn btn-primary btn-block">REQUEST FOR SOIL TESTING</button>      
-                      </form>
+                      
                  </div>
+                 <div class="col-md-2"  style="margin:0px">
+                      <select id="year" class="form-control disabled" name="year" value ="">
+                          <option value="2019-2020">2019-2020</option>
+                          <option value="2019-2020">2020-2021</option>          
+                      </select>
+                 </div>
+
                   </div>
+                  </form>
                     </center>
                   </div>
 
@@ -34,13 +43,25 @@
                                        <thead class="thead-dark">
                                           <tr role="row">
                                               <th>Date</th>
-                                              <th>Description</th>
+                                              <th>ph</th>
+                                              <th>Nitrogen</th>
+                                              <th>Phosphorus</th>
+                                              <th>Potasium</th> 
+                                              <th>rainfall</th>
+                                              <th>Recommended Crop</th>
+                                              <th>Status</th>
                                            </tr>
                                 </thead>
                                         <tbody>
                                       <tr v-for="soil in soilreport" :key="soil.id"> 
                                        <td>{{soil.created_at  | stddate}}</td>
-                                        <td>{{soil.status}}</td>
+                                       <td>{{soil.ph}}</td>
+                                       <td>{{soil.nitrogen}}</td>
+                                       <td>{{soil.phosphorus}}</td>
+                                       <td>{{soil.potasium}}</td>
+                                       <td>{{soil.rainfall}}</td>
+                                       <td>{{soil.crop}}</td>
+                                       <td>{{soil.status}}</td>
                   <!-- <td>{{this.data}}</td> -->
                                      </tr>
                                          </tbody>
@@ -67,10 +88,12 @@ export default {
     }
   },methods:{
       soiltesting(){
-          axios.post('http://127.0.0.1:8000/soiltesting');
+        this.$progressbar.start();
+          axios.post('/soiltesting');
+          this.$progressbar.finish();
       },
       loaddata(){
-           axios.get('http://127.0.0.1:8000/soiltesting').then(({ data })=>{this.soilreport = data});
+           axios.get('/soiltesting').then(({ data })=>{this.soilreport = data});
       }
   },mounted()
     {
