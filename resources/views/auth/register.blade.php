@@ -22,7 +22,7 @@
                         @csrf
                         <!--USER NAME -->
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label">{{ __('Name') }}<span style="color:#ff0000;">*</span></label>
                             <div class="col-md-8">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus placeholder="Mohit Agrawal">
 
@@ -36,7 +36,7 @@
 
                         <!-- EMAIL ADDRESS -->
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label">{{ __('E-Mail Address') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="someone@example.com">
@@ -51,7 +51,7 @@
 
                         <!-- ROLE -->
                         <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label">{{ __('Role') }}</label>
+                            <label for="role" class="col-md-4 col-form-label">{{ __('Role') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <select id="role" class="form-control @error('role') is-invalid @enderror" name="role" value ="{{ old('role') }}">
@@ -103,7 +103,7 @@
 
                         <!-- MOBILE NUMBER -->
                         <div class="form-group row">
-                            <label for="mobile" class="col-md-4 ">{{ __('Mobile Number') }}</label>
+                            <label for="mobile" class="col-md-4 ">{{ __('Mobile Number') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <input id="mobile" type="tel" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}"  autocomplete="mobile" placeholder="+91 9998887776">
@@ -118,7 +118,7 @@
 
                         <!-- AADHAR CARD -->
                         <div class="form-group row">
-                            <label for="aadhar_card" class="col-md-4 ">{{ __('Aadhar Card No') }}</label>
+                            <label for="aadhar_card" class="col-md-4 ">{{ __('Aadhar Card No') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <input id="aadhar_card" type="number" class="form-control @error('aadhar_card') is-invalid @enderror" name="aadhar_card" value="{{ old('aadhar_card') }}"  autocomplete="aadhar_card" placeholder="XXXX-XXXX-XXXX-XXXX">
@@ -149,7 +149,7 @@
 
                         <!--PASSWORD-->
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label">{{ __('Password') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password" placeholder="Enter Your Password">
@@ -164,7 +164,7 @@
 
                         <!--PASSWORD CONFIRM-->
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label">{{ __('Confirm Password') }}<span style="color:#ff0000;">*</span></label>
 
                             <div class="col-md-8">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  autocomplete="new-password" placeholder="Re-Enter Your Password to confirm">

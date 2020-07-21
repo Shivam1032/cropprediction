@@ -115,7 +115,7 @@
           </li>
 
           <li class="nav-item">	    
-            <router-link to="/user" class="nav-link">
+            <router-link to="/sellproduce" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
               <p>Sell Your Produce
                 <!-- <span class="right badge badge-danger">New</span> -->	             

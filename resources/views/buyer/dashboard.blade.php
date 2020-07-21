@@ -47,8 +47,7 @@
                                         {{ __('Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -104,7 +103,7 @@
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
-                  My Deals
+                  My Records
                 </p>
               </a>
           </li>
@@ -140,7 +139,7 @@
                 <p>
                   Contact Us
                 </p>
-              </a>
+                </router-link>
           </li>
           <li class="nav-item">
             <a  class="nav-link"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
