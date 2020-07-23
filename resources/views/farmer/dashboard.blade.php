@@ -123,7 +123,7 @@
             </router-link>
           </li>
           <li class="nav-item">	    
-            <router-link to="/sellproduce" class="nav-link">
+            <router-link to="/farmeroffers" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
               <p>My Offers
                 <!-- <span class="right badge badge-danger">New</span> -->	             

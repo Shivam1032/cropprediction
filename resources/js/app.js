@@ -46,6 +46,8 @@ let routes =
     {path: '/buyapplication',component:require('./components/buyrequest.vue').default},
     {path: '/distribution',component:require('./components/goodsdistribution.vue').default},
     {path: '/sellproduce',component:require('./components/sellproduce.vue').default},
+    {path: '/farmeroffers',component:require('./components/farmeroffer.vue').default},
+    {path: '/products',component:require('./components/products.vue').default},
 ] 
 
 /**
