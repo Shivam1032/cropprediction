@@ -62,8 +62,10 @@ methods:{
      this.$Progress.finish();
 }},mounted()
     {
+       
        // axios.get("/getuserid").then(({ data })=>{this.user = data});
        this.loadhistory();
+       
     }
 }
 </script>

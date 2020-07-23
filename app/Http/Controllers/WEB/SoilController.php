@@ -40,7 +40,7 @@ class SoilController extends Controller
      */
     public function show($id)
     {
-        //
+        return Soil::where('farmer_id',$id)->get();
     }
     /**
      * Update the specified resource in storage.
@@ -52,9 +52,7 @@ class SoilController extends Controller
     public function update(Request $request, $id)
     {
         //
-                
-
-
+            dd($request);
     }
     /**
      * Remove the specified resource from storage.
