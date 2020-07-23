@@ -11,6 +11,7 @@
 						<form class="form form-vertical" @submit.prevent="reportaproblem" @keydown="form.onKeydown($event)" >
 							<div class="form-body">
 								<div class="row">
+									
 									<div class="col-12">
 										<div class="form-group">
 											<label>Name</label>
@@ -60,7 +61,7 @@
 export default {
     mounted()
     {
-        console.log('Component Mounted')
+        // console.log('Component Mounted')
     },data(){
 		return{
 		 form:new Form({

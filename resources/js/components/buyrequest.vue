@@ -7,7 +7,6 @@
                     <h4 class="card-title">Submit Application Form</h4>
                   </div>
                  <div class="card-body">
-                        
                         <div class="row">
                            <form class="form form-horizontal" @>
                             <div class="form-body">

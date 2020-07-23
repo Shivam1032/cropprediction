@@ -13,12 +13,27 @@ import {Form,HasError, AlertError } from 'vform';
 import moment from 'moment';
 import VueProgressBar from 'vue-progressbar'
 import VueGeolocation from 'vue-browser-geolocation';
+import swal from 'sweetalert2';
 
-
+window.swal = swal;
 
 window.Form = Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
+
+const toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: false,
+    onOpen: (toast) => {
+      toast.addEventListener('mouseenter', swal.stopTimer)
+      toast.addEventListener('mouseleave', swal.resumeTimer)
+    }
+  })
+
+  window.toast = toast;
 
 import VueRouter from 'vue-router';
 
@@ -44,7 +59,7 @@ let routes =
     {path: '/profile',component:require('./components/profile.vue').default},
     {path: '/reportproblem',component:require('./components/reportproblem.vue').default},
     {path: '/buyapplication',component:require('./components/buyrequest.vue').default},
-    {path: '/distribution',component:require('./components/goodsdistribution.vue').default},
+    // {path: '/distribution',component:require('./components/goodsdistribution.vue').default},
     {path: '/sellproduce',component:require('./components/sellproduce.vue').default},
     {path: '/farmeroffers',component:require('./components/farmeroffer.vue').default},
     {path: '/products',component:require('./components/products.vue').default},

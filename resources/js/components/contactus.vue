@@ -45,31 +45,11 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
+                </div>
 		</div>
       </div>    
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
 
 
-
-
-
-
-
-
-<script>
-export default {
-    mounted()
-    {
-        console.log('Component Mounted')
-    }
-}
-</script>
