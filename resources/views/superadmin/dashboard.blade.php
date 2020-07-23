@@ -135,7 +135,15 @@
               </li>
             </ul>
           </li>
-
+          <li class="nav-item">
+            <router-link to="/test" class="nav-link">
+              <i class="nav-icon fa fa-paper-plane"></i>
+              <p>
+                Set MSP
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </router-link>
+          </li>
 
 
           <li class="nav-item">
