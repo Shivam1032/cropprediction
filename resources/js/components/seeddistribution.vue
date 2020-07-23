@@ -42,15 +42,6 @@
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Fertilizer</label>
-                                    </div>
-                                    <div class="col-md-8 form-group">
-                                        <select id="role" class="form-control" name="role" value ="">
-                                            <option value="etc">etc1</option>
-                                            <option value="etc">etc2</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
                                         <label>Quantity<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-4 form-group">

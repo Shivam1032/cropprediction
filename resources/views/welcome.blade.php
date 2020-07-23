@@ -101,7 +101,7 @@
         </li>
       </ul>
     </div>
-  </nav>
+</nav>
 
 
   <!-- Carousel -->
