@@ -100,27 +100,18 @@
 
           <!-- TODO MY DEAL PAGE -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="products" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
-                  My Records
-                </p>
-              </a>
-          </li>
-
-          <li class="nav-item">
-            <router-link to="buyapplication" class="nav-link">
-                <i class="nav-icon fas fa-bookmark"></i>
-                <p>
-                  Submit Application
+                  Product
                 </p>
               </router-link>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-hourglass-start"></i>
+                <i class="nav-icon fas fa-bookmark"></i>
                 <p>
-                  View Application Status
+                  My Bids
                 </p>
               </a>
           </li>
