@@ -21,6 +21,7 @@
                                 <th>Contact Info</th>
                                 <th>Offer Price</th>
                                 <th>Per</th>
+                                <th>Quantity Needed</th>
                                 <th>Accept</th>
                                 <th>Decline</th>
                             </tr>
@@ -31,6 +32,7 @@
                                 <td>7894561230</td>
                                 <td>500</td>
                                 <td>kg</td>
+                                <td>500</td>
                                 <td><button type="button" class="btn btn-primary btn-block">Accept</button></td>
                                 <td><button type="button" class="btn btn-danger btn-block">Decline</button></td>
                             </tr>
