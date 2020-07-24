@@ -97,7 +97,7 @@
         </li>
 
           <li class="nav-item">
-            <router-link to="/manageuser" class="nav-link">
+            <router-link to="/manageuseradmin" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage User

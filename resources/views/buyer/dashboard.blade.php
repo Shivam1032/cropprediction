@@ -18,12 +18,12 @@
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
                   
               <ul class="navbar-nav">
-                  <form class="form">
+                  
                   <li class="nav-item">
-                    <input type="text" id="email" class="form-control" placeholder="Search">
+                    
                   </li>
                   <li class="nav-item">
-                    <button type="submit" class="btn btn-outline-primary mt-50"><b><i class="fa fa-search"></i></b></button>
+                    
                   </li>
                   </form>
               </ul>

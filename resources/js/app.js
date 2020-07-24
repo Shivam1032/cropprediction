@@ -48,6 +48,7 @@ Vue.use(VueProgressBar, {
 let routes =
 [
     {path: '/manageuser',component:require('./components/user.vue').default},
+    {path: '/manageuseradmin',component:require('./components/admin.vue').default},
     {path: '/requesttesting',component:require('./components/soiltesting.vue').default},
     {path: '/contact-us',component:require('./components/contactus.vue').default},
     {path: '/soil-report',component:require('./components/soilreport.vue').default},
