@@ -25,9 +25,6 @@
     </ul>
         <!-- TOP NAVIGATION BAR -->
 
-              
-
-
               <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                           <div class="float-right">
@@ -117,7 +114,7 @@
             </a>
             <ul class="nav nav-treeview" style="display: block;">
               <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+                <router-link  to="soil-report" class="nav-link">
                   <i class="fa fa-snowflake nav-icon"></i>
                   <p>Soil Report</p>
                 </a>

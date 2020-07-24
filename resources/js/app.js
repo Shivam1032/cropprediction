@@ -45,8 +45,6 @@ Vue.use(VueProgressBar, {
     failedColor: 'red',
     height: '4px'
   })
-
-
 let routes =
 [
     {path: '/manageuser',component:require('./components/user.vue').default},
@@ -103,7 +101,8 @@ Vue.component(
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.filter('upText',function(value)
+
+ Vue.filter('upText',function(value)
 {
     if (!value) return ''
     value = value.toString()
@@ -114,8 +113,8 @@ Vue.filter('stddate',function(value){
    return moment(value).format("DD/MM/YYYY");
 });
 
-
 let app = new Vue({
     el: '#app',
     router
 });
+

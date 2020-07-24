@@ -117,7 +117,7 @@
           <li class="nav-item">	    
             <router-link to="/sellproduce" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
-              <p>Sell Your Produce
+              <p>Sell Product
                 <!-- <span class="right badge badge-danger">New</span> -->	             
                </p>
             </router-link>
@@ -125,7 +125,7 @@
           <li class="nav-item">	    
             <router-link to="/farmeroffers" class="nav-link">
               <i class="nav-icon fas fa-th"></i>	           
-              <p>My Offers
+              <p>My Offer
                 <!-- <span class="right badge badge-danger">New</span> -->	             
                </p>
             </router-link>
