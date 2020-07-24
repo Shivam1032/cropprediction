@@ -16,15 +16,18 @@
 <div class="wrapper" id="app">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <!-- <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-     
-    </ul> -->
-        <!-- TOP NAVIGATION BAR -->
-                            <!-- Right Side Of Navbar -->
+                  
+              <ul class="navbar-nav">
+                  <form class="form">
+                  <li class="nav-item">
+                    <input type="text" id="email" class="form-control" placeholder="Search">
+                  </li>
+                  <li class="nav-item">
+                    <button type="submit" class="btn btn-outline-primary mt-50"><b><i class="fa fa-search"></i></b></button>
+                  </li>
+                  </form>
+              </ul>
+
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest 
