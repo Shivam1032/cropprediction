@@ -2,6 +2,16 @@
 <template>
   <div class="container">
       <div class="row justify-content-center mt-3">
+          <div class="col-md-12 justify-content-end">
+              
+                <form class="form-inline ml-auto">
+                    <div class="lg-form my-0">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                    <button href="#" class="btn btn-primary btn-md my-0 ml-sm-2" type="submit">Search</button>
+                </form>
+              
+          </div>
          <div class="col-md-12">
              <div class="card border-info text-center">
                 <div class="card-content">
