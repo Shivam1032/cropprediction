@@ -41,7 +41,7 @@ class SoilController extends Controller
      */
     public function store(Request $request)
     {
-        $count = Soil::where('farmer_id',Auth::id)->where()->count();
+        $count = Soil::where('farmer_id',Auth::id)->count();
         return Soil::create([
             'farmer_id' => Auth::id(),
             'status' => "Requested For Soil Testing",
