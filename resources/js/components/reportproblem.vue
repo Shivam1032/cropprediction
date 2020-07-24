@@ -74,7 +74,7 @@ export default {
 	},methods:{
 		 reportaproblem(){
 			 //TODO PROBLEM REQUEST
-			 	this.form.post('http://127.0.0.1:8000/contact');
+			 	this.form.post('http://127.0.0.1:8000/contact').then();
 		}
 	}
 }

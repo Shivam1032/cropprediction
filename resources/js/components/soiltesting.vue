@@ -88,9 +88,9 @@ export default {
     }
   },methods:{
       soiltesting(){
-        this.$progressbar.start();
+     //   this.$progressbar.start();
           axios.post('/soiltesting');
-          this.$progressbar.finish();
+       //   this.$progressbar.finish();
       },
       loaddata(){
            axios.get('/soiltesting').then(({ data })=>{this.soilreport = data});

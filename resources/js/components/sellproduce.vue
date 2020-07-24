@@ -7,7 +7,6 @@
                     <h4 class="card-title">Sell Your Produce</h4>
                   </div>
                  <div class="card-body">
-                        
                         <div class="row">
                            <form class="form form-horizontal">
                             <div class="form-body">
@@ -90,7 +89,9 @@
 export default {
     data(){
         return{
-            
+            form:new Form({
+                
+            }),
         }
     }
     ,mounted()

@@ -11,8 +11,8 @@
                                             <i class="fa fa-map-marker" style="font-size:2rem;"></i>
                                         </div>
                                         <div class="text-muted line-ellipsis"><h4>Where to find us</h4></div>
-                                        <lable class="mb-0">Bhilai</lable><br>
-                                        <lable class="mb-0">Durg, Chhattisgarh</lable>
+                                        <label class="mb-0">Bhilai</label><br>
+                                        <label class="mb-0">Durg, Chhattisgarh</label>
                                     </div>
                                 </div>
                             </div>
@@ -25,8 +25,8 @@
                                             <i class="fa fa-phone" style="font-size:2rem;"></i>
                                         </div>
                                         <div class="text-muted line-ellipsis"><h4>Call Us At</h4></div>
-                                        <lable class="mb-0">+91 1234567890</lable><br>
-                                        <lable class="mb-0">+91 1234567890</lable>
+                                        <label class="mb-0">+91 1234567890</label><br>
+                                        <label class="mb-0">+91 1234567890</label>
                                     </div>
                                 </div>
                             </div>
@@ -39,8 +39,8 @@
                                             <i class="fa fa-envelope" style="font-size:2rem;"></i>
                                         </div>
                                         <div class="text-muted line-ellipsis"><h4>Email Us At</h4></div>
-                                        <lable class="mb-0">abc@test.com</lable><br>
-                                        <lable class="mb-0">kbfms@helpline.in</lable>
+                                        <label class="mb-0">abc@test.com</label><br>
+                                        <label class="mb-0">kbfms@helpline.in</label>
                                     </div>
                                 </div>
                             </div>
