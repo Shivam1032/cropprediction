@@ -16,10 +16,12 @@ class CreateRequestsTable extends Migration
         Schema::create('requests', function (Blueprint $table)
         {
             $table->id();
-            $table->string('name',100);
-            $table->string('subject',150);
-            $table->string('description',300);
-            $table->timestamps();
+            $table->foreignId('farmer_id');
+            $table->string('aids_needed',40);
+            $table->string('brief',150);
+            $table->dateTime('created_at',0);
+
+            $table->foreign('farmer_id')->references('id')->on('users');
         });
     }
 

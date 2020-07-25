@@ -10,7 +10,7 @@ class Contact extends Model
     protected $primaryKey = 'id';
    
    protected $fillable=[
-      'user_id','name','mobile','subject','message',
+      'user_id','name','mobile','subject','message','status',
    ];
 
 

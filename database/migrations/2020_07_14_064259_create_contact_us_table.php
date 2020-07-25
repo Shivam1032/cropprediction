@@ -22,6 +22,7 @@ class CreateContactUsTable extends Migration
             $table->string('mobile',20);
             $table->string('subject',100);
             $table->string('message',300);
+            $table->string('status',100);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

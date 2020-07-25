@@ -11,7 +11,7 @@ class History extends Model
     // const CREATED_AT = 'creation_date';
 
     protected $fillable = [
-      'user_id','description'
+      'user_id','updated_by_id','description'
     ];
     
 }

@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('lang/{locale}','HomeController@lang');     //ADDED THIS LINE FOR LANG
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/superadmin','SuperAdminController@index')->name('superadmin');

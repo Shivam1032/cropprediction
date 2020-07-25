@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSoilTestingTable extends Migration
+class CreateSoilTestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSoilTestingTable extends Migration
      */
     public function up()
     {
-        Schema::create('soil_test', function (Blueprint $table) {
+    Schema::create('soil_test', function (Blueprint $table) {
             $table->id();
             $table->foreignId('farmer_id');        
             $table->foreignId('soil_tester_id')->nullable();
@@ -27,7 +27,7 @@ class CreateSoilTestingTable extends Migration
             $table->string('status',50);
             $table->timestamps();            
             $table->foreign('farmer_id')->references('id')->on('users');
-            $table->foreign('soil_test_id')->references('id')->on('users');
+            $table->foreign('soil_tester_id')->references('id')->on('users');
 
 
         });

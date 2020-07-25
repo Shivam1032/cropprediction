@@ -66,12 +66,23 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Language
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">English</a>
+          @if(Lang::locale()=='en')
+            English
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">हिन्दी</a>
           </div>
+          @endif
+
+          @if(Lang::locale()=='hi')
+          हिन्दी
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+            </div>
+          @endif
+          </a>
+          
+            <!-- <a class="dropdown-item" href="#">English</a> -->
+
         </li>
         <li class="nav-item dropdown">
           <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,7 +100,7 @@
         </li>
       </ul>
     </div>
-  </nav>
+</nav>
 
         <main class="py-4">
             @yield('content')
