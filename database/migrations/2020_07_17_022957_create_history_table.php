@@ -19,6 +19,7 @@ class CreateHistoryTable extends Migration
             $table->foreignId('user_id');
             $table->foreignId('updated_by_id');
             $table->string('description',200);
+            $table->timestamps();
           //  $table->();
 
             $table->foreign('user_id')->references('id')->on('users');

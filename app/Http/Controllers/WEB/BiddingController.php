@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\WEB;
 
+use App\Http\Controllers\Controller;
 use App\bidding;
 use Illuminate\Http\Request;
 

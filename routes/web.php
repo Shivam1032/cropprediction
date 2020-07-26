@@ -44,15 +44,19 @@ Route::get('/farmer/home','FarmerController@home')->name('farmerhome');
 //   });
 
   Route::Resources([
-    'user' => 'WEB\UserController',
+    'user'        => 'WEB\UserController',
     'soiltesting' => 'WEB\SoilController',
-    'history' => 'WEB\HistoryController',
-    'request' => 'WEB\RequestController',
-    'contact' => 'WEB\ContactController',
+    'history'     => 'WEB\HistoryController',
+    'request'     => 'WEB\RequestController',
+    'contact'     => 'WEB\ContactController',
+    'distaloc'    => 'WEB\AlotDistrictsController',
+    'bidding'     => 'WEB\BiddingController',
+    'product'     => 'WEB\ProductController',
+    'sell'        => 'WEB\SellsController',
 ]);
 
 
-// Auth::routes();
+// Auth::routes()
 
-// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home')
 

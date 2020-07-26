@@ -13,5 +13,7 @@ class History extends Model
     protected $fillable = [
       'user_id','updated_by_id','description'
     ];
+
+
     
 }

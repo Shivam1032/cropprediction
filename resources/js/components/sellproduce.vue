@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center">
          <div class="col-md-8">
              <div class ="card card-default">
                   <div class="card-header">
@@ -84,9 +84,15 @@ export default {
         },
         searchrequest()
         {
-                axios.get('');
+           axios.get('');
+        },getproduct()
+        {
+
         }
     }
 }
 
 </script>
+
+
+v-model="form.message"
