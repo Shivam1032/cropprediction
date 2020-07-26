@@ -10,7 +10,9 @@
 
                 <p>Total Farmers</p>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <router-link to="/manageuseradmin" class="nav-link small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+              </router-link>    
             </div>
           </div>
           <!-- ./col -->
@@ -22,7 +24,9 @@
 
                 <p>Total Buyers</p>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <router-link to="/manageuseradmin" class="nav-link small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+              </router-link>
             </div>
           </div>
           <!-- ./col -->
@@ -34,7 +38,9 @@
 
                 <p>Fertilizer Distribution Center</p>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <router-link to="/manageuseradmin" class="nav-link small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+              </router-link>
             </div>
           </div>
           <!-- ./col -->
@@ -46,7 +52,9 @@
 
                 <p>Soil testing Centers</p>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <router-link to="/manageuseradmin" class="nav-link small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+              </router-link>
             </div>
           </div>
           <!-- ./col -->
@@ -64,7 +72,7 @@
                  <div class="row">
                    <div class="col-12">
                      <center>
-                       <h3><b>User Reports</b></h3>
+                       <h3><b>User Problem Reports</b></h3>
                      </center>
                      </div>
                      <div class="col-sm-12">
@@ -96,7 +104,103 @@
             </div>
         </div>
           </div>
-          <div class="col-md-6 col-12"></div>
+          <div class="col-md-6 col-12">
+            <div class="card">
+
+            <!-- /.card-header -->
+            <div class="card-body">
+              
+              <div class="dataTables_wrapper dt-bootstrap4">
+                 <div class="row">
+                   <div class="col-12">
+                     <center>
+                       <h3><b>Soil Testing Reports</b></h3>
+                     </center>
+                     </div>
+                     <div class="col-sm-12">
+               <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
+                                       <thead>
+                                             <tr role="row">
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Farmer Id">Farmer id</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Sample Number">Sample No.</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="pH">pH(0-14)</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Nitrogen">N</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Phosphores">P</th> 
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Potesium">K</th>
+                                                <th class="sorting" tabindex="0"  rowspan="1" colspan="1" aria-label="Status">status</th>
+                                             </tr>
+
+                                        </thead>
+                                        <tbody>
+                                         <tr role="row" class="odd"> 
+                                             <td>123</td>
+                                             <td>23</td>
+                                             <td >124</td>
+                                             <td >543</td>
+                                             <td >87</td>
+                                             <td >09</td>
+                                             <td >closed</td>
+                                          </tr>
+                                         </tbody>
+                                </table>
+              </div>
+              </div>
+            <!-- /.card-body -->
+          </div>
+            </div>
+        </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-12 col-12">
+            <div class="card">
+
+            <!-- /.card-header -->
+            <div class="card-body">
+              
+              <div class="dataTables_wrapper dt-bootstrap4">
+                 <div class="row">
+                   <div class="col-12">
+                     <center>
+                       <h3><b>District wise report</b></h3>
+                     </center>
+                     </div>
+                     <div class="col-sm-12">
+              <table id="example2" class="table table-bordered table-hover dataTable dtr-inline table-responsive" role="grid" aria-describedby="User Managment">
+                <thead>
+                <tr role="row">
+                    <th>S.No.</th>
+                    <th>District Name</th>
+                    <th>Number of Farmers</th>
+                    <th>Number of Buyers</th>
+                    <th>Total Soil Testings</th>
+                    <th>Total Seed Distribution</th>
+                    <th>Number of Soil Testing run(Daily)</th>
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr role="row" class="odd">
+                  <td>1</td>
+                  <td>XYZhdigsauyjfa</td>
+                  <td>233</td>
+                  <td>466</td>
+                  <td>49</td>
+                  <td>646</td>
+                  <td>4976</td>
+                </tr>
+                </tbody>
+              </table>
+              </div>
+              </div>
+            <!-- /.card-body -->
+          </div>
+            </div>
+        </div>
+          </div>
         </div>
 
         

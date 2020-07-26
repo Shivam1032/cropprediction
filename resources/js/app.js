@@ -63,6 +63,8 @@ let routes =
     {path: '/farmeroffers',component:require('./components/farmeroffer.vue').default},
     {path: '/products',component:require('./components/products.vue').default},
     {path: '/sa_dashboard',component:require('./components/superadmin/dashboard.vue').default},
+    {path: '/a_dashboard',component:require('./components/admin/dashboard.vue').default},
+    {path: '/f_dashboard',component:require('./components/farmer/dashboard.vue').default},
 ] 
 
 /**
