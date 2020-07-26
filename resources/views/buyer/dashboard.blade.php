@@ -111,12 +111,12 @@
               </router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+          <router-link to="mybids" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>
                   My Bids
                 </p>
-              </a>
+                </router-link>
           </li>
           <li class="nav-item">
             <router-link to="reportproblem" class="nav-link">

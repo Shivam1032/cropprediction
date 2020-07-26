@@ -115,23 +115,23 @@
               </p>
             </a>
             <ul class="nav nav-treeview" style="display: block;">
-              <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
+            <li class="nav-item">
+                <router-link  to="soil-report" class="nav-link">
                   <i class="fa fa-snowflake nav-icon"></i>
                   <p>Soil Report</p>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                <router-link  to="seed-report" class="nav-link">
                   <i class="nav-icon fa fa-snowflake"></i>
                   <p>Seed Report</p>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="../layout/boxed.html" class="nav-link">
+                <router-link  to="fertilizer-report" class="nav-link">
                   <i class="fa fa-snowflake nav-icon"></i>
                   <p>Fertilizer Report</p>
-                </a>
+                </router-link>
               </li>
             </ul>
           </li>
@@ -147,7 +147,7 @@
 
 
           <li class="nav-item">
-            <router-link to="/test" class="nav-link">
+            <router-link to="/postnotice" class="nav-link">
               <i class="nav-icon fa fa-paper-plane"></i>
               <p>
                 Post Notice

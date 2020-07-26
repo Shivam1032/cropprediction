@@ -2,9 +2,9 @@
 <template>
   <div class="container">
       <div class="row justify-content-center mt-3">
-          <div class="col-md-12 justify-content-end">
+          <div class="col-md-12 p-2">
               
-                <form class="form-inline ml-auto">
+                <form class="form-inline ml-2">
                     <div class="lg-form my-0">
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     </div>
