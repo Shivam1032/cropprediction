@@ -57,8 +57,8 @@ methods:{
     },
 
     loadhistory(){
-    this.$Progress.start();
-     axios.get('http://127.0.0.1:8000/history').then(({ data })=>{this.history = data});
+     this.$Progress.start();
+     axios.get('/history').then(({ data })=>{this.history = data});
      this.$Progress.finish();
 }},mounted()
     {

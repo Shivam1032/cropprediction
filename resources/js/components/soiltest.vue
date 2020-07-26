@@ -97,12 +97,28 @@ export default {
             report:[],
             user:[],
             search:'',
-            // form : new Form({
-            //     id:'',
-            // }),
+             form : new Form({
+                 id:'',
+             }),
         }
     },methods:{
         // var app :this,
+
+       async checkrequest(){
+           await axios.post('https://croppredictionapi2.herokuapp.com/predict',{
+               Rainfall:452.98507,
+                Temprature:23.34327,
+                Nitrogen:10,
+                Phosphorus:15,
+                Potassium:230,
+                Ph:6.7,
+
+            }).then(response=>{}
+            ).catch(e=>{
+                this.errors.push(e)
+            })
+
+        },
         updatereport()
         {
                 id = this.search;
@@ -114,6 +130,8 @@ export default {
              id = this.search;
             axios.get('/soiltesting/'+id).then(({data})=>{this.user=data});
         }
+    },mounted(){
+            this.checkrequest();
     }
 }
 

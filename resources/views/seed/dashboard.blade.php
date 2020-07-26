@@ -104,15 +104,43 @@
               </p>
             </a>
         </li>
+
           <li class="nav-item">
             <router-link to="distribution" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
-                {{__('Distribution')}}
+                {{__('Seed Distribution')}}
                 </p>
             </router-link>
-
           </li>
+
+          <li class="nav-item">
+            <router-link to="distribution" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                {{__('Fertilizer Distribution')}}
+                </p>
+            </router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="distribution" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                {{__('SEED REPORT')}}
+                </p>
+            </router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="distribution" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                {{__('FERTILIZER REPORT')}}
+                </p>
+            </router-link>
+          </li>
+
           <li class="nav-item">
             <router-link to="reportproblem" class="nav-link">
                 <i class="nav-icon fa fa-bug"></i>

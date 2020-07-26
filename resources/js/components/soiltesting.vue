@@ -38,29 +38,33 @@
                             <div class="col-sm-12 col-md-6"></div>
                         </div>
                         <div class="row">
-                           <div class="col-sm-12" style= "overflow-x:auto;">
-                                <table id="display soil process" class="table table-bordered table-hover dataTable dtr-inline" role="grid">
+                           <div class="col-md-12" style= "overflow-x:auto;">
+                                <table id="display soil process" class="table table-bordered table-hover" role="grid">
                                        <thead class="thead-dark">
                                           <tr role="row">
+                                              <th>SNo</th>
                                               <th>Date</th>
                                               <th>ph</th>
                                               <th>Nitrogen</th>
                                               <th>Phosphorus</th>
                                               <th>Potasium</th> 
                                               <th>rainfall</th>
+                                              <th>temprature</th>
                                               <th>Recommended Crop</th>
                                               <th>Status</th>
                                            </tr>
                                 </thead>
                                         <tbody>
-                                      <tr v-for="soil in soilreport" :key="soil.id"> 
+                                      <tr v-for="(soil,index) in soilreport" :key="soil.id" i=index> 
+                                        <td>{{index+1}}</td>
                                        <td>{{soil.created_at  | stddate}}</td>
                                        <td>{{soil.ph}}</td>
                                        <td>{{soil.nitrogen}}</td>
                                        <td>{{soil.phosphorus}}</td>
                                        <td>{{soil.potasium}}</td>
                                        <td>{{soil.rainfall}}</td>
-                                       <td>{{soil.crop}}</td>
+                                       <td>{{soil.temprature}}</td>
+                                       <td>{{soil.recommended_crop}}</td>
                                        <td>{{soil.status}}</td>
                   <!-- <td>{{this.data}}</td> -->
                                      </tr>

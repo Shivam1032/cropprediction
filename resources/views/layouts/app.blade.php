@@ -94,10 +94,12 @@
 
             <a class="nav-link" href="{{route('register')}}">Register</a>
           <!-- </div> -->
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="{{route('login')}}">Log In</a>
-        </li>
+             </li>
+
+           <li class="nav-item dropdown">
+            <a class="nav-link" href="{{route('login')}}">Log In</a>
+           </li>
+
       </ul>
     </div>
 </nav>

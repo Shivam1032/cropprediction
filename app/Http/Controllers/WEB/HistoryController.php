@@ -20,7 +20,7 @@ class HistoryController extends Controller
         //dd(Auth::id());
         $id= Auth::id();
        // dd('Hello');
-        return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
+        return History::where('user_id',$id)->latest()->get();
     }
 
     /**
@@ -31,11 +31,25 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        $id= Auth::id();
-         return History::create([
-            'user_id'=>$id,
-           'description'=> $request['description']
-         ]);
+            $role = Auth::user()->role;
+          //  dd($role);
+            $id= Auth::id();
+            if($role===5 || $role ===4)
+            {
+            return History::create([
+                'user_id'=>$id,
+                'updated_by_id'=>$id,
+                'description'=> $request['description'],
+            ]);
+            }else if($role === 3||$role === 2||$role === 1||$role === 0){
+                return History::create([
+                'user_id'=>$request['id'],
+                'updated_by_id'=>$id,
+                'description'=> $request['description'],
+                ]);
+            }else{
+                return "Hello";
+            }
     }
 
     /**
@@ -47,6 +61,7 @@ class HistoryController extends Controller
     public function show($id)
     {
         //
+        
         // return History::where('user_id',$id)->orderBy('created_at', 'desc')->get();
     }
 
@@ -59,7 +74,7 @@ class HistoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //NO USE
     }
 
     /**
@@ -70,6 +85,6 @@ class HistoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //NO USE
     }
 }

@@ -28,8 +28,6 @@ class CreateSoilTestTable extends Migration
             $table->timestamps();            
             $table->foreign('farmer_id')->references('id')->on('users');
             $table->foreign('soil_tester_id')->references('id')->on('users');
-
-
         });
     }
 
