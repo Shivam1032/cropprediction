@@ -8,7 +8,7 @@
                 </div>
 
                     <div class="card-body" style="padding:0px;">
-                        <img src="../../../public/image/farmer.jpg" class="img-fluid" >
+                        <img src="../../../public/image/farmer1.jpg" class="img-fluid" >
                     </div>  
 
                     <div class ="card-footer">
@@ -27,7 +27,7 @@
                 </div>
 
                     <div class="card-body" style="padding:0px;"> 
-                        <img src="../../../public/image/farmer.jpg" class="img-fluid">
+                        <img src="/image/farmer.jpg" class="img-fluid">
                     </div> 
 
                      <div class ="card-footer">

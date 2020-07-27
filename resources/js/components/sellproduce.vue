@@ -11,27 +11,26 @@
                            <form class="form form-horizontal">
                             <div class="form-body">
                                 <div class="row p-4">
+                                    
                                     <div class="col-md-4">
-                                        <label>Full Name<span style="color:#ff0000;">*</span></label>
-                                    </div>
-                                    <div class="col-md-8 form-group">
-                                        <input type="text" id="full-name" class="form-control" name="Full Name" placeholder="Full Name" required>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Product Type<span style="color:#ff0000;">*</span></label>
+                                        <label>Product Name<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <select id="role" class="form-control" name="role" value ="">
-                                            <option value="cereals">'cereals</option>
+                                            <option value="cereals">cereals</option>
                                             <option value="nuts">nuts</option>
                                             <option value="others">others</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Product Name<span style="color:#ff0000;">*</span></label>
+                                        <label>Product Variety<span style="color:#ff0000;">*</span></label>
                                     </div>
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="product-name" class="form-control" name="Product Name" placeholder="Product Name" required>
+                                        <select id="role" class="form-control" name="role" value ="">
+                                            <option value="cereals">cereals</option>
+                                            <option value="nuts">nuts</option>
+                                            <option value="others">others</option>
+                                        </select>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Quantity<span style="color:#ff0000;">*</span></label>
@@ -43,26 +42,6 @@
                                         <select id="role" class="form-control" name="role" value ="">
                                             <option value="kg">'kg'</option>
                                             <option value="tonne">'tonne'</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>State<span style="color:#ff0000;">*</span></label>
-                                    </div>
-                                    <div class="col-md-8 form-group">
-                                        <select id="role" class="form-control" name="role" value ="">
-                                            <option value="abc">ABC</option>
-                                            <option value="xyz">XYZ</option>
-                                            <option value="others">others</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>District<span style="color:#ff0000;">*</span></label>
-                                    </div>
-                                    <div class="col-md-8 form-group">
-                                        <select id="role" class="form-control" name="role" value ="">
-                                            <option value="abc">ABC</option>
-                                            <option value="xyz">XYZ</option>
-                                            <option value="others">others</option>
                                         </select>
                                     </div>
                                     <div class="col-md-4">
