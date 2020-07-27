@@ -13,7 +13,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -61,9 +61,9 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
+                <!-- </div>
             </div>
-       
+        -->
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -106,7 +106,7 @@
         </li>
 
           <li class="nav-item">
-            <router-link to="distribution" class="nav-link">
+            <router-link to="distributeseed" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                 {{__('Seed Distribution')}}
@@ -115,7 +115,7 @@
           </li>
 
           <li class="nav-item">
-            <router-link to="distribution" class="nav-link">
+            <router-link to="distributefertilizer" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                 {{__('Fertilizer Distribution')}}
@@ -196,7 +196,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-      @yield('content')
+        <router-view></router-view>
               
       </div><!-- /.container-fluid -->
     </section>

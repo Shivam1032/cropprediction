@@ -29,16 +29,14 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $id = Auth::id();
-        if(Auth::check())
-        {
-             Contact::create([
+           return  Contact::create([
                     'user_id'=>$id,
                     'name' => $request['name'],
                     'mobile' => $request['mobile'],
                     'subject' => $request['subject'],
                     'message' => $request['message'],
-            ]);  
-        }
+                    'status' => "UN RESOLVED"
+            ]);
 
     }
 

@@ -15,11 +15,11 @@
                 
                         <form  @submit.prevent="sendlabourrequest" @keydown="form.onKeydown($event)">
                             <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
-                            </form>
-                    
+                        </form>
                     </div>
             </div>
         </div>
+
         <div class="col-md-4">
             <div class ="card card-default">
                 <div class ="card-header">
@@ -28,15 +28,16 @@
 
                     <div class="card-body" style="padding:0px;"> 
                         <img src="../../../public/image/farmer.jpg" class="img-fluid">
-                    </div>   
+                    </div> 
+
                      <div class ="card-footer">
                             <form  @submit.prevent="sendirrigationrequest" @keydown="form.onKeydown($event)">
                             <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Request</button>
                             </form>
-                    
                     </div>
             </div>
         </div>
+        
         <div class="col-md-4">
             <div class ="card card-default">
                 <div class ="card-header">

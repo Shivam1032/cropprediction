@@ -4,7 +4,7 @@
          <div class="col-md-8">
              <div class ="card card-default">
                   <div class="card-header">
-                    <h4 class="card-title">Sell Your Produce</h4>
+                    <h4 class="card-title">Distribute Seed</h4>
                   </div>
                  <div class="card-body">
                         

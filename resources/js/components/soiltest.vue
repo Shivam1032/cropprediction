@@ -7,7 +7,7 @@
 
                   <div class="card-header">
                       <form @submit.prevent="searchrequest">
-                    <h4 class="card-title">Farmer Id : </h4>
+                    <h4 class="card-title">Sample No : </h4>
                     <div class="input-group">          
                         <input type="text" class="form-control" name=search id=search v-model="search">
                            <div class="input-group-append">
@@ -28,11 +28,11 @@
                                 <div class="row p-4">
                                     
                                     <div class="col-md-4">
-                                        <label>Sample Number</label>
+                                        <label>Farmer id</label>
                                     </div>
                                     
                                     <div class="col-md-8 form-group">
-                                        <input type="text" id="sampleno" class="form-control" name="sample_no" disabled>
+                                        <input type="text" id="sampleno" class="form-control" names="sample_no" disabled>
                                     </div>
                                     
                                     <div class="col-md-4">
@@ -115,7 +115,7 @@ export default {
 
             }).then(response=>{}
             ).catch(e=>{
-                this.errors.push(e)
+                this.errors.push(e);
             })
 
         },

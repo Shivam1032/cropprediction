@@ -7,24 +7,26 @@
                     <center>
                       <form @submit.prevent="soiltesting" @keydown="form.onKeydown($event)">
                     <div class="col-md-8 form-inline">
-                    <div class="col-md-2">
+                    <!-- <div class="col-md-2"> -->
                     <!-- <label class="form-inline">Cycle</label> -->
-                      <select id="cycle" class="form-control" name="role" value ="">
+                      <!-- <select id="cycle" class="form-control" name="role" value ="">
                           <option value="c1">'Cycle 1'</option>
                           <option value="c2">'Cycle 2'</option>          
-                      </select>
-                    </div>
-                    <div class="col-md-6" style="margin:0px">
-                      
+                      </select> -->
+                    <!-- </div> -->
+                    
+                    <div class="col-md-12" style="margin:0px">
+                      <center>
                       <button type="submit" class="btn btn-primary btn-block">REQUEST FOR SOIL TESTING</button>      
-                      
+                      </center>
                  </div>
-                 <div class="col-md-2"  style="margin:0px">
-                      <select id="year" class="form-control disabled" name="year" value ="">
+                    
+                 <!-- <div class="col-md-2"  style="margin:0px"> -->
+                      <!-- <select id="year" class="form-control disabled" name="year" value ="">
                           <option value="2019-2020">2019-2020</option>
                           <option value="2019-2020">2020-2021</option>          
-                      </select>
-                 </div>
+                      </select> -->
+                 <!-- </div> -->
 
                   </div>
                   </form>
