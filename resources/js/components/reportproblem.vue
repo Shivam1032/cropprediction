@@ -74,7 +74,24 @@ export default {
 	},methods:{
 		 reportaproblem(){
 			 //TODO PROBLEM REQUEST
-			 	this.form.post('/contact');
+			swal.fire({
+                    title: 'Are you sure?',
+                    text: "You want to reort a problem",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'REPORT'})
+                    .then((result) => 
+                        {
+                        if (result.value)
+                            {                           
+                                   this.form.post('/contact').then(()=>{
+                                      swal.fire('Submitted','Your problem has been Succesfully Submitted','success')
+                                  })
+                                  axios.post('/history',{description:'Reported Problem'})
+                            }
+                        })
 		}
 	}
 }

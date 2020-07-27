@@ -44,15 +44,19 @@
                                             <option value="tonne">'tonne'</option>
                                         </select>
                                     </div>
+
                                     <div class="col-md-4">
                                         <label>Contact<span style="color:#ff0000;">*</span></label>
                                     </div>
+
                                     <div class="col-md-8 form-group">
                                         <input type="number" id="mobile-number" class="form-control" name="mobile" placeholder="Mobile Number">
                                     </div>
+
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary btn-block mr-1 mb-1">Submit</button>
+                                        <button type="submit" class="btn btn-block mr-1 mb-1 btn-success">Sell</button>
                                     </div>
+
                                 </div>
                             </div>
                         </form>
@@ -66,17 +70,14 @@
 
 <script>
 export default {
+
     data(){
-        return{
+        return{ 
             form:new Form({
                 
             }),
-        }
-    }
-    ,mounted()
-    {
-        console.log('Component Mounted')
 
+        }
     },methods:{
         loadreport()
         {
@@ -93,6 +94,3 @@ export default {
 }
 
 </script>
-
-
-v-model="form.message"

@@ -23,14 +23,18 @@
                 </tr>
                 </thead>
 
-                <tbody>
+                <tbody  v-if="history.length">  
                 <tr v-for="his in history" :key="his.id"> 
                   <td>{{his.created_at  | stddate}}</td>
                   <td>{{his.description}}</td>
                   <!-- <td>{{this.data}}</td> -->
                 </tr>
                 </tbody>
-
+                <tbody v-else>
+                        <tr>
+                          <td colspan="2"> History is not present</td>
+                        </tr>
+                </tbody>
               </table>
               </div>
               </div>
@@ -62,7 +66,6 @@ methods:{
      this.$Progress.finish();
 }},mounted()
     {
-       
        // axios.get("/getuserid").then(({ data })=>{this.user = data});
        this.loadhistory();
        

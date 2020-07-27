@@ -41,9 +41,9 @@ Vue.use(VueRouter)
 Vue.use(VueGeolocation);
 
 Vue.use(VueProgressBar, {
-    color: 'rgb(0, 0, 0)',
+    color: 'rgb(0, 0, 255)',
     failedColor: 'red',
-    height: '4px'
+    height: '10px'
   })
 let routes =
 [

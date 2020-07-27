@@ -6,7 +6,7 @@
              <div class ="card card-default">
 
                   <div class="card-header">
-                      <form @submit.prevent="searchrequest">
+                      <form @submit.prevent="checkrequest">
                     <h4 class="card-title">Sample No : </h4>
                     <div class="input-group">          
                         <input type="text" class="form-control" name=search id=search v-model="search">
@@ -98,25 +98,36 @@ export default {
             user:[],
             search:'',
              form : new Form({
-                 id:'',
+                 Rainfall:'400',
+                 Temprature:'255',
+                  Nitrogen:'36',
+                  Phosphorus:'42',
+                  Potassium:'24',
+                  Ph:'6.4'
+
              }),
         }
     },methods:{
         // var app :this,
 
-       async checkrequest(){
-           await axios.post('https://croppredictionapi2.herokuapp.com/predict',{
-               Rainfall:452.98507,
-                Temprature:23.34327,
-                Nitrogen:10,
-                Phosphorus:15,
-                Potassium:230,
-                Ph:6.7,
+        checkrequest(){
+        //    await axios.post('https://predictionkiloapi.herokuapp.com/predict',null,{
+        //        params:{
+        //        Rainfall: '452.98507',
+        //         Temprature:'23.34327',
+        //         Nitrogen:'10',
+        //         Phosphorus:'15',
+        //         Potassium:'230',
+        //         Ph:'6.7',
+        //    }
+        //     }).then(response=>{}
+        //     ).catch(e=>{
+        //         // this.errors.push(e)
+        //         console.warn(e);
+        //     })
 
-            }).then(response=>{}
-            ).catch(e=>{
-                this.errors.push(e);
-            })
+
+        this.form.post('https://predictionkiloapi.herokuapp.com/predict');
 
         },
         updatereport()
@@ -131,8 +142,9 @@ export default {
             axios.get('/soiltesting/'+id).then(({data})=>{this.user=data});
         }
     },mounted(){
-            this.checkrequest();
+            
     }
+
 }
 
 </script>
