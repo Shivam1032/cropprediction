@@ -48,7 +48,7 @@ Vue.use(VueProgressBar, {
 let routes =
 [
     {path: '/manageuser',component:require('./components/user.vue').default},
-    {path: '/manageuseradmin',component:require('./components/admin.vue').default},
+    {path: '/manageadmin',component:require('./components/admin.vue').default},
     {path: '/requesttesting',component:require('./components/soiltesting.vue').default},
     {path: '/contact-us',component:require('./components/contactus.vue').default},
     {path: '/soil-report',component:require('./components/soilreport.vue').default},
@@ -59,7 +59,9 @@ let routes =
     {path: '/testsoil',component:require('./components/soiltest.vue').default},
     {path: '/profile',component:require('./components/profile.vue').default},
     {path: '/reportproblem',component:require('./components/reportproblem.vue').default},
-    {path: '/buyapplication',component:require('./components/buyrequest.vue').default},
+    {path: '/distributeseed',component:require('./components/seeddistribution.vue').default},
+    {path: '/distributefertilizer',component:require('./components/fertilizerdistribution.vue').default},
+    // {path: '/buyapplication',component:require('./components/buyrequest.vue').default},s
     // {path: '/distribution',component:require('./components/goodsdistribution.vue').default},
     {path: '/sellproduce',component:require('./components/sellproduce.vue').default},
     {path: '/farmeroffers',component:require('./components/farmeroffer.vue').default},
@@ -70,7 +72,6 @@ let routes =
     {path: '/a_dashboard',component:require('./components/admin/dashboard.vue').default},
     {path: '/f_dashboard',component:require('./components/farmer/dashboard.vue').default},
 ] 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

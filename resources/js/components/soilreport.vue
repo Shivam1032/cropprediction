@@ -42,11 +42,11 @@
                                          <tr v-for="record in report" :key="record.id"> 
                                              <td>{{record.farmer_id}}</td>
                                              <td>{{record.id}}</td>
-                                             <!-- <td>District</td> -->
+                                             <!-- <td>{{}} -->
                                              <td >{{record.ph}}</td>
-                                             <td >{{record.N}}</td>
-                                             <td >{{record.P}}</td>
-                                             <td >{{record.K}}</td>
+                                             <td >{{record.nitrogen}}</td>
+                                             <td >{{record.phosphorus}}</td>
+                                             <td >{{record.potasium}}</td>
                                              <td >{{record.status}}</td>
                                           </tr>
                                          </tbody>
