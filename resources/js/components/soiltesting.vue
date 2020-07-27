@@ -47,9 +47,9 @@
                                               <th>SNo</th>
                                               <th>Date</th>
                                               <th>ph</th>
-                                              <th>Nitrogen</th>
-                                              <th>Phosphorus</th>
-                                              <th>Potasium</th> 
+                                              <th>N</th>
+                                              <th>Ph</th>
+                                              <th>K</th> 
                                               <th>rainfall</th>
                                               <th>temprature</th>
                                               <th>Recommended Crop</th>
@@ -87,19 +87,39 @@ export default {
   data()
   {
     return{
-      form :new Form({
-        name:''
-      }),
       soilreport:{}
     }
   },methods:{
       soiltesting(){
-     //   this.$progressbar.start();
-          axios.post('/soiltesting');
-       //   this.$progressbar.finish();
+        this.$Progress.start();
+                  swal.fire({
+                    title: 'Are you sure?',
+                    text: "You want to request for soil testing",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Submit'})
+                    .then((result) => 
+                        {
+                        if (result.value)
+                            {
+                                                        
+                                  axios.post('/soiltesting',{description:'MACHINE REQUIRED'}).then(()=>{
+                                      //this.$Progress.finish();
+                                      swal.fire('Submitted','Your Request for soil testing has been Succesfully Submitted','success')
+                                  })
+                                  axios.post('/history',{description:'Requested For Soil Testing'})
+                                  
+                            }
+                        })
+                        
+          
       },
       loaddata(){
+        this.$Progress.start();
            axios.get('/soiltesting').then(({ data })=>{this.soilreport = data});
+        this.$Progress.finish();
       }
   },mounted()
     {
