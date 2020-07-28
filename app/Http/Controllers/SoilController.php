@@ -14,7 +14,6 @@ class SoilController extends Controller
     {
         return Soil::create([
             'farmer_id'=>$data['farmer_id'],
-        
         ]);
     }
 

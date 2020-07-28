@@ -12,7 +12,6 @@ class AdminController extends Controller
          $this->middleware('admin');
     }
 
-
     public function index()
     {
         return view('admin.dashboard');
@@ -22,4 +21,5 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+    
 }

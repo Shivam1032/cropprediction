@@ -4,7 +4,9 @@ namespace App\Http\Controllers\WEB;
 
 use App\Http\Controllers\Controller;
 use App\Sells;
+use App\Product;
 use Illuminate\Http\Request;
+use Auth;
 
 class SellsController extends Controller
 {
@@ -28,7 +30,17 @@ class SellsController extends Controller
 
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        $product_id =Product::where('product_name',$request['name'])->where('variety',$request['variety'])->value('id');
+      //  dd($product_id);
+       return Sells::create([
+            'seller_id' => Auth::id(),
+            'product_id' => $product_id ,
+            'avail_qty' =>$request['qty'],
+            'product_uom' =>$request['uom'],
+            'visible' =>"1",
+        ]);
+
     }
 
     /**

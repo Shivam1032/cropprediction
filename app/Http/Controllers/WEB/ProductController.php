@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        Product::where('visible',1)->latest()->get();
     }
 
     /**
@@ -25,7 +25,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       return Product::create([
+
+        ]);
     }
 
     /**

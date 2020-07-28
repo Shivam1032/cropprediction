@@ -124,7 +124,7 @@
           </li>
 
           <li class="nav-item">
-            <router-link to="distribution" class="nav-link">
+            <router-link to="seed-report" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                 {{__('SEED REPORT')}}
@@ -133,7 +133,7 @@
           </li>
 
           <li class="nav-item">
-            <router-link to="distribution" class="nav-link">
+            <router-link to="fertilizer-report" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                 {{__('FERTILIZER REPORT')}}

@@ -15,7 +15,16 @@ class CreateBiddingTable extends Migration
     {
         Schema::create('bidding', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('SellId');
+            $table->foreignId('BuyerId');
+            $table->integer('Bidqty');
+            $table->string('uom',10);
+            $table->float('bid_price',10,2);
+            // $table->int('requiredqty');
             $table->timestamps();
+
+            $table->foreign('SellId')->references('id')->on('sell');
+            $table->foreign('BuyerId')->references('id')->on('users');
         });
     }
 
