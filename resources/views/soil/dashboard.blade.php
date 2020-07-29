@@ -132,7 +132,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="background-image: url('image/logo.png');height:50%; background-position: center;background-repeat: no-repeat;background-size:fill">
-    <!-- Content Header (Page header) -->;
+    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">

@@ -111,23 +111,22 @@ export default {
         // var app :this,
 
         checkrequest(){
-        //    await axios.post('https://predictionkiloapi.herokuapp.com/predict',null,{
-        //        params:{
-        //        Rainfall: '452.98507',
-        //         Temprature:'23.34327',
-        //         Nitrogen:'10',
-        //         Phosphorus:'15',
-        //         Potassium:'230',
-        //         Ph:'6.7',
-        //    }
-        //     }).then(response=>{}
-        //     ).catch(e=>{
-        //         // this.errors.push(e)
-        //         console.warn(e);
-        //     })
+          axios.post('http://127.0.0.1:5000/predict',{
+                Rainfall: '452.98507',
+                Temprature:'23.34327',
+                Nitrogen:'10',
+                Phosphorus:'15',
+                Potassium:'230',
+                Ph:'6.7',
+           })
+            // }).then(response=>{}
+            // ).catch(e=>{
+            //     // this.errors.push(e)
+            //     console.warn(e);
+            // })
 
 
-        this.form.post('https://predictionkiloapi.herokuapp.com/predict');
+        // this.form.post('https://predictionkiloapi.herokuapp.com/predict');
 
         },
         updatereport()
@@ -142,7 +141,7 @@ export default {
             axios.get('/soiltesting/'+id).then(({data})=>{this.user=data});
         }
     },mounted(){
-            
+            this.checkrequest();
     }
 
 }
